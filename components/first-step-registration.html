@@ -1,0 +1,305 @@
+<div class="registration-component">
+  <div class="locations-container" id="locationsContainer">
+    <button class="location-button" data-location="blue-springs">Blue Springs</button>
+    <button class="location-button" data-location="crossroads">Crossroads</button>
+    <button class="location-button" data-location="independence">Independence</button>
+    <button class="location-button" data-location="johnson-county">Johnson County</button>
+    <button class="location-button" data-location="lees-summit">Lee’s Summit</button>
+    <a href="https://my.livingproof.co/Registration?RegistrationInstanceId=399"><button class="location-button">Online</button></a>
+  </div>
+
+  <!-- Holder for desktop -->
+  <div id="monthsHolder"></div>
+</div>
+
+<style>
+/* Layout & font */
+.registration-component {
+  margin: 25px 0;
+  text-align: center;
+  font-family: "proxima-nova", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Locations row */
+.locations-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Location button style */
+.location-button {
+  background-color: #ffffff;
+  color: #053B5A;
+  font-weight: 700;
+  font-size: 18px;
+  border: 2px solid #053B5A;
+  padding: 14px 22px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.location-button:hover {
+  background-color: #EAF6FB;
+  color: #053B5A;
+}
+
+/* Active (selected) */
+.location-button.active {
+  background-color: #053B5A;
+  color: #ffffff;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 6px 14px rgba(5,59,90,0.15);
+}
+
+/* months section (injected) */
+.months-section {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* visible state */
+.months-section.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+}
+
+/* sentence */
+.registration-sentence {
+  display: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* grid layout */
+.months-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px 12px;
+  justify-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* month buttons */
+.month-button {
+  background-color: #F1FCFF;
+  color: #053B5A;
+  font-weight: 700;
+  font-size: 14px;
+  height: 52px;
+  min-width: 140px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #053B5A;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.month-button:hover {
+  background-color: #053B5A;
+  color: #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .locations-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .location-button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .months-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 320px;
+  }
+
+  .month-button {
+    min-width: 145px;
+    height: 56px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .months-grid {
+    max-width: 260px;
+    gap: 10px;
+  }
+  .month-button {
+    min-width: 120px;
+    height: 54px;
+    font-size: 14px;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const HIDE_YEAR = 2026;
+  const MOBILE_BP = 768;
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth() + 1;
+
+  const locationsData = {
+    "blue-springs": {
+      2: "https://my.livingproof.co/Registration/bspfscfeb2026",
+      4: "https://my.livingproof.co/Registration/bspfscapril2026",
+      6: "https://my.livingproof.co/Registration/bspfscjune2026",
+      8: "https://my.livingproof.co/Registration/bspfscaugust2026",
+      10: "https://my.livingproof.co/Registration/bspfscoct2026",
+      12: "https://my.livingproof.co/Registration/bspfscdec2026"
+    },
+    "crossroads": {
+      2: "https://my.livingproof.co/Registration/crsfscfeb2026",
+      4: "https://my.livingproof.co/Registration/crsfscapril2026",
+      6: "https://my.livingproof.co/Registration/crsfscjune2026",
+      8: "https://my.livingproof.co/Registration/crsfscaugust2026",
+      10: "https://my.livingproof.co/Registration/crsfscoct2026",
+      12: "https://my.livingproof.co/Registration/crsfscdec2026"
+    },
+    "independence": {
+      1: "https://my.livingproof.co/Registration/indfscjan2026",
+      3: "https://my.livingproof.co/Registration/indfscmarch2026",
+      5: "https://my.livingproof.co/Registration/indfscmay2026",
+      7: "https://my.livingproof.co/Registration/indfscjuly2026",
+      9: "https://my.livingproof.co/Registration/indfscsept2026",
+      11: "https://my.livingproof.co/Registration/indfscnov2026"
+    },
+    "johnson-county": {
+      1: "https://my.livingproof.co/Registration/jckfscjan2026",
+      2: "https://my.livingproof.co/Registration/jckfscfeb2026",
+      3: "https://my.livingproof.co/Registration/jckfscmar2026",
+      4: "https://my.livingproof.co/Registration/jckfscapril2026",
+      5: "https://my.livingproof.co/Registration/jckfscmay2026",
+      6: "https://my.livingproof.co/Registration/jckfscjune2026",
+      7: "https://my.livingproof.co/Registration/jckfscjuly2026",
+      8: "https://my.livingproof.co/Registration/jckfscaug2026",
+      9: "https://my.livingproof.co/Registration/jckfscsept2026",
+      10: "https://my.livingproof.co/Registration/jckfscoct2026",
+      11: "https://my.livingproof.co/Registration/jckfscnov2026"
+    },
+    "lees-summit": {
+      1: "https://my.livingproof.co/Registration/fscjanuary2026",
+      2: "https://my.livingproof.co/Registration/fscfebruary2026",
+      3: "https://my.livingproof.co/Registration/fscmarch2026",
+      4: "https://my.livingproof.co/Registration/fscapril2026",
+      5: "https://my.livingproof.co/Registration/fscmay2026",
+      6: "https://my.livingproof.co/Registration/fscjune2026",
+      7: "https://my.livingproof.co/Registration/fsclstjuly2026",
+      8: "https://my.livingproof.co/Registration/fscaugust2026",
+      9: "https://my.livingproof.co/Registration/fscseptember2026",
+      10: "https://my.livingproof.co/Registration/fsclstoct2026",
+      11: "https://my.livingproof.co/Registration/fscnovember2026",
+      12: "https://my.livingproof.co/Registration/fsclstdec2026"
+    }
+  };
+
+  const container = document.getElementById('locationsContainer');
+  const monthsHolder = document.getElementById('monthsHolder');
+  const buttons = document.querySelectorAll('.location-button');
+
+  // sentence template
+  const sentence = document.createElement('div');
+  sentence.className = 'registration-sentence';
+  sentence.textContent = "What month would you like to join us for First Step?";
+
+  function buildMonthsSection(locationKey) {
+    const map = locationsData[locationKey];
+    const section = document.createElement('div');
+    section.className = 'months-section';
+
+    const grid = document.createElement('div');
+    grid.className = 'months-grid';
+
+    Object.keys(map)
+      .filter(m => (currentYear < HIDE_YEAR) || (parseInt(m,10) >= currentMonth))
+      .sort((a,b) => parseInt(a,10) - parseInt(b,10))
+      .forEach(m => {
+        const a = document.createElement('a');
+        a.className = 'month-button';
+        a.href = map[m];
+        a.target = '_blank';
+        a.textContent = new Date(2026, m-1, 1).toLocaleString('default', {month:'long'});
+        grid.appendChild(a);
+      });
+
+    section.appendChild(sentence.cloneNode(true));
+    section.appendChild(grid);
+    return section;
+  }
+
+  function placeSection(section, clickedBtn) {
+    if (window.innerWidth <= MOBILE_BP) {
+      clickedBtn.insertAdjacentElement('afterend', section);
+    } else {
+      monthsHolder.replaceChildren();
+      monthsHolder.insertAdjacentElement('beforeend', section);
+    }
+    requestAnimationFrame(() => section.classList.add('visible'));
+    section.querySelector('.registration-sentence').style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function closeAll() {
+    buttons.forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.months-section').forEach(s => s.remove());
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isActive = btn.classList.contains('active');
+      const key = btn.dataset.location;
+
+      if (isActive) {
+        btn.classList.remove('active');
+        if (window.innerWidth <= MOBILE_BP) {
+          const next = btn.nextElementSibling;
+          if (next && next.classList.contains('months-section')) next.remove();
+        } else {
+          monthsHolder.replaceChildren();
+        }
+        return;
+      }
+
+      closeAll();
+      btn.classList.add('active');
+      const section = buildMonthsSection(key);
+      placeSection(section, btn);
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    const activeBtn = document.querySelector('.location-button.active');
+    const existing = document.querySelector('.months-section');
+    if (activeBtn && existing) {
+      if (window.innerWidth <= MOBILE_BP) {
+        activeBtn.insertAdjacentElement('afterend', existing);
+      } else {
+        monthsHolder.replaceChildren();
+        monthsHolder.insertAdjacentElement('beforeend', existing);
+      }
+    }
+  });
+})();
+</script>

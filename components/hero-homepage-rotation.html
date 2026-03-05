@@ -1,0 +1,169 @@
+<!-- HERO ROTATING BACKGROUND (PRODUCTION OPTIMIZED) -->
+
+<style>
+
+/* ----------------------------- */
+/*      HERO BASE STYLES         */
+/* ----------------------------- */
+
+.hero-rotate {
+  width: calc(100% - 20px);
+  margin: 20px auto 0 auto;
+  height: 650px;
+
+  /* 🔥 Default image loads instantly (no blue flash) */
+  background-image: url("https://abundant-life.com/wp-content/uploads/2025/11/5-25-25-LS-2.jpg");
+
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+
+  background-color: #053B5A;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Gradient overlay */
+.hero-rotate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(5,59,90,0.05) 0%,
+    rgba(5,59,90,0.75) 60%
+  );
+}
+
+/* Ensure content above overlay */
+.hero-rotate > .elementor-container,
+.hero-rotate .elementor-widget-wrap,
+.hero-rotate .elementor-column,
+.hero-rotate .elementor-element {
+  position: relative;
+  z-index: 2;
+}
+
+/* ----------------------------- */
+/*      DESKTOP CINEMATIC ZOOM   */
+/* ----------------------------- */
+
+@media (min-width: 768px) {
+  .hero-rotate {
+    animation: heroZoom 18s ease-out forwards;
+  }
+
+  @keyframes heroZoom {
+    from { background-size: 105%; }
+    to { background-size: 100%; }
+  }
+}
+
+/* ----------------------------- */
+/*      MOBILE STABILITY         */
+/* ----------------------------- */
+
+@media (max-width: 767px) {
+  .hero-rotate {
+    height: 440px;
+    background-position: center 75%;
+    animation: none; /* disable zoom on mobile */
+  }
+
+  .hero-rotate .elementor-container {
+    padding-top: 140px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+/* ----------------------------- */
+/*       TEXT ANIMATION          */
+/* ----------------------------- */
+
+.hero-animate .elementor-heading-title,
+.hero-animate .elementor-widget-text-editor,
+.hero-animate .elementor-button-wrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-animate .elementor-widget-text-editor {
+  animation-delay: 0.3s;
+}
+
+.hero-animate .elementor-button-wrapper {
+  animation-delay: 0.6s;
+}
+
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+
+<script>
+(function() {
+
+  const hero = document.querySelector(".hero-rotate");
+  if (!hero) return;
+
+  const isMobile = window.innerWidth <= 767;
+
+  const images = [
+    {
+      url: "https://abundant-life.com/wp-content/uploads/2025/11/5-25-25-LS-2.jpg",
+      focalDesktop: "60% 30%",
+      focalMobile: "center 70%"
+    },
+    {
+      url: "https://abundant-life.com/wp-content/uploads/2025/11/8-17-25-LS-86-1.jpg",
+      focalDesktop: "70% 30%",
+      focalMobile: "center 75%"
+    },
+    {
+      url: "https://abundant-life.com/wp-content/uploads/2025/11/8-17-25-LS-74-1.jpg",
+      focalDesktop: "50% 60%",
+      focalMobile: "center 80%"
+    },
+    {
+      url: "https://abundant-life.com/wp-content/uploads/2025/11/DSC05553-1.jpg",
+      focalDesktop: "70% 40%",
+      focalMobile: "center 85%"
+    },
+    {
+      url: "https://abundant-life.com/wp-content/uploads/2025/11/chad_background-1-2.jpg",
+      focalDesktop: "50% 65%",
+      focalMobile: "center 80%"
+    },
+    {
+      url: "https://abundant-life.com/wp-content/uploads/2025/11/REVIVAL_DAY2-156-1-1.jpg",
+      focalDesktop: "75% 45%",
+      focalMobile: "center 78%"
+    }
+  ];
+
+  // Random selection
+  const selected = images[Math.floor(Math.random() * images.length)];
+
+  // Apply random image immediately (no preload delay)
+  hero.style.backgroundImage = `url('${selected.url}')`;
+  hero.style.backgroundPosition = isMobile
+    ? selected.focalMobile
+    : selected.focalDesktop;
+
+  // Trigger text animation AFTER image assignment
+  requestAnimationFrame(() => {
+    hero.classList.add("hero-animate");
+  });
+
+})();
+</script>
