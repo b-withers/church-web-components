@@ -1,32 +1,44 @@
 <div id="baptism-2026" class="ns-wrap" aria-label="Baptism 2026 Registration">
   <div class="ns-step" id="ns-step-location">
-    <h2 class="ns-heading ns-main-heading">Where would you like to be baptized?</h2>
+    <h2 class="ns-heading ns-main-heading">
+      Where would you like to be baptized?
+    </h2>
     <div class="ns-btn-group" role="group" aria-label="Locations"></div>
   </div>
 
   <div class="ns-step" id="ns-step-date" hidden>
     <h3 class="ns-heading">What date would you like to be baptized?</h3>
     <div class="ns-btn-group" role="group" aria-label="Dates"></div>
-    <p class="ns-note ns-hidden" id="ns-no-dates">No upcoming baptism dates are available.</p>
+    <p class="ns-note ns-hidden" id="ns-no-dates">
+      No upcoming baptism dates are available.
+    </p>
   </div>
 
   <div class="ns-step" id="ns-step-time" hidden>
     <h3 class="ns-heading">Which service time would you like?</h3>
     <div class="ns-btn-group" role="group" aria-label="Service Times"></div>
-    <p class="ns-note ns-hidden" id="ns-no-times">No service times are available for this date.</p>
+    <p class="ns-note ns-hidden" id="ns-no-times">
+      No service times are available for this date.
+    </p>
   </div>
 
   <div class="ns-step" id="ns-step-register" hidden>
     <h3 class="ns-heading">Ready to register?</h3>
-    <a id="ns-register" class="ns-cta" href="#" target="_blank" rel="noopener">Register Now</a>
+    <a id="ns-register" class="ns-cta" href="#" target="_blank" rel="noopener"
+      >Register Now</a
+    >
     <p class="ns-reset">
-      <button type="button" id="ns-reset-btn" class="ns-link">Change location or start over</button>
+      <button type="button" id="ns-reset-btn" class="ns-link">
+        Change location or start over
+      </button>
     </p>
   </div>
 </div>
 
 <style>
-  #baptism-2026 [hidden] { display: none !important; }
+  #baptism-2026 [hidden] {
+    display: none !important;
+  }
 
   #baptism-2026.ns-wrap {
     max-width: 940px;
@@ -36,12 +48,14 @@
     color: #053b5a;
   }
 
-  #baptism-2026 .ns-step { margin: 20px 0 26px; }
+  #baptism-2026 .ns-step {
+    margin: 20px 0 26px;
+  }
 
   #baptism-2026 .ns-heading {
     font-size: 1.15rem;
     margin: 0 0 12px;
-    letter-spacing: .2px;
+    letter-spacing: 0.2px;
   }
 
   #baptism-2026 .ns-main-heading {
@@ -57,10 +71,14 @@
   }
 
   @media (min-width: 640px) {
-    #baptism-2026 .ns-btn-group { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    #baptism-2026 .ns-btn-group {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
   @media (min-width: 900px) {
-    #baptism-2026 .ns-btn-group { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    #baptism-2026 .ns-btn-group {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   #baptism-2026 .ns-btn {
@@ -73,8 +91,12 @@
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0,0,0,.05);
-    transition: transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease,
+      background 0.12s ease,
+      color 0.12s ease;
 
     /* word wrap */
     white-space: normal;
@@ -86,7 +108,7 @@
   #baptism-2026 .ns-btn:hover,
   #baptism-2026 .ns-btn:focus-visible {
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(0,0,0,.09);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
   }
 
   #baptism-2026 .ns-btn[aria-pressed="true"] {
@@ -103,17 +125,22 @@
     padding: 14px 22px;
     font-weight: 700;
     border: 2px solid #053b5a;
-    box-shadow: 0 3px 12px rgba(0,0,0,.1);
-    transition: transform .12s ease, box-shadow .12s ease;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease;
   }
 
   #baptism-2026 .ns-cta:hover,
   #baptism-2026 .ns-cta:focus-visible {
     transform: translateY(-1px);
-    box-shadow: 0 8px 22px rgba(0,0,0,.12);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
   }
 
-  #baptism-2026 .ns-note { font-size: .95rem; margin-top: 8px; }
+  #baptism-2026 .ns-note {
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
 
   #baptism-2026 .ns-link {
     background: transparent;
@@ -125,337 +152,538 @@
     font: inherit;
   }
 
-  #baptism-2026 .ns-hidden { display: none !important; }
+  #baptism-2026 .ns-hidden {
+    display: none !important;
+  }
 </style>
 
 <script>
-(function () {
-  const REGISTRATION_CLOSE_DAYS_BEFORE = 7;
-  const CHURCH_HOUSE_URL = "https://my.livingproof.co/Registration?RegistrationInstanceId=384";
+  (function () {
+    const REGISTRATION_CLOSE_DAYS_BEFORE = 7;
+    const CHURCH_HOUSE_URL =
+      "https://my.livingproof.co/Registration?RegistrationInstanceId=384";
 
-  const slug = s => String(s).toLowerCase()
-    .replace(/&/g, 'and')
-    .replace(/'/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+    const slug = (s) =>
+      String(s)
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/'/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
 
-  function show(el) { if (el) el.removeAttribute('hidden'); }
-  function hide(el) { if (el) el.setAttribute('hidden', ''); }
-
-  // Hide date once registrations close (N days before baptism)
-  function isClosedDateISO(iso) {
-    const [y, m, d] = iso.split('-').map(Number);
-    const baptismDate = new Date(y, m - 1, d);
-    const closeDate = new Date(baptismDate);
-    closeDate.setDate(closeDate.getDate() - REGISTRATION_CLOSE_DAYS_BEFORE);
-
-    const today = new Date(); today.setHours(0, 0, 0, 0);
-    closeDate.setHours(0, 0, 0, 0);
-
-    return today >= closeDate;
-  }
-
-  // NEW behavior: show only the next 3 "active" months that actually have available dates
-  function filterToNextThreeActiveMonths(sortedDates) {
-    const months = [];
-    for (const d of sortedDates) {
-      const ym = d.iso.slice(0, 7); // YYYY-MM
-      if (!months.includes(ym)) months.push(ym);
-      if (months.length >= 3) break;
+    function show(el) {
+      if (el) el.removeAttribute("hidden");
     }
-    return sortedDates.filter(d => months.includes(d.iso.slice(0, 7)));
-  }
-
-  // Time helpers:
-  // - "730", "900", "1050" => AM
-  // - "300p", "515p", "530p", "500p" => PM
-  function timeKeyToMinutes(key) {
-    const k = String(key).trim().toLowerCase();
-    const isP = k.endsWith('p');
-    const isA = k.endsWith('a');
-    const digits = (isP || isA) ? k.slice(0, -1) : k;
-
-    const num = parseInt(digits, 10);
-    if (!Number.isFinite(num)) return 0;
-
-    const str = String(num);
-    const mins = str.length > 2 ? parseInt(str.slice(-2), 10) : 0;
-    const hrs  = str.length > 2 ? parseInt(str.slice(0, -2), 10) : parseInt(str, 10);
-
-    let h24 = hrs;
-    if (isP) h24 = (hrs % 12) + 12;
-    else if (isA) h24 = (hrs === 12) ? 0 : hrs;
-
-    return (h24 * 60) + mins;
-  }
-
-  function timeKeyToLabel(key) {
-    const k = String(key).trim().toLowerCase();
-    const isP = k.endsWith('p');
-    const isA = k.endsWith('a');
-    const digits = (isP || isA) ? k.slice(0, -1) : k;
-
-    const num = parseInt(digits, 10);
-    if (!Number.isFinite(num)) return String(key);
-
-    const str = String(num);
-    const mins = str.length > 2 ? parseInt(str.slice(-2), 10) : 0;
-    const hrs  = str.length > 2 ? parseInt(str.slice(0, -2), 10) : parseInt(str, 10);
-
-    const ampm = isP ? "PM" : "AM";
-    let h12 = hrs % 12; if (h12 === 0) h12 = 12;
-    return `${h12}:${String(mins).padStart(2, '0')} ${ampm}`;
-  }
-
-  const LOCATIONS = [
-    { name: "Blue Springs" },
-    { name: "Crossroads" },
-    { name: "Independence" },
-    { name: "Johnson County" },
-    { name: "Lee's Summit" },
-    { name: "Church House", special: true }
-  ];
-
-  const DATES = [
-    { key: "january-11",   label: "January 11",   iso: "2026-01-11" },
-    { key: "february-22",  label: "February 22",  iso: "2026-02-22" },
-    { key: "april-4",      label: "April 4",      iso: "2026-04-04" },
-    { key: "april-5",      label: "April 5",      iso: "2026-04-05" },
-    { key: "may-24",       label: "May 24",       iso: "2026-05-24" },
-    { key: "june-28",      label: "June 28",      iso: "2026-06-28" },
-    { key: "august-9",     label: "August 9",     iso: "2026-08-09" },
-    { key: "september-13", label: "September 13", iso: "2026-09-13" },
-    { key: "october-25",   label: "October 25",   iso: "2026-10-25" },
-    { key: "december-13",  label: "December 13",  iso: "2026-12-13" }
-  ];
-
-  // FULL dataset (your provided REG_URLS)
-  const REG_URLS = {
-    "blue-springs": {
-      "january-11":   { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=844", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=863", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=864" },
-      "february-22":  { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=865", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=866", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=867" },
-      "april-4":      { "300p": "https://my.livingproof.co/Registration?RegistrationInstanceId=1114", "515p": "https://my.livingproof.co/Registration?RegistrationInstanceId=1115" },
-      "april-5":      { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=868", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=869", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=870" },
-      "may-24":       { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=871", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=872", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=873" },
-      "june-28":      { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=874", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=875", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=876" },
-      "august-9":     { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=877", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=878", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=879" },
-      "september-13": { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=880", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=881", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=882" },
-      "october-25":   { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=883", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=884", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=885" },
-      "december-13":  { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=886", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=887", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=888" }
-    },
-
-    "crossroads": {
-      "january-11":   { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=889", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=890" },
-      "february-22":  { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=891", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=892" },
-      "april-5":      { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=1122", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=893", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=894" },
-      "may-24":       { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=895", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=896" },
-      "june-28":      { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=897", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=898" },
-      "august-9":     { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=899", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=900" },
-      "september-13": { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=901", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=902" },
-      "october-25":   { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=903", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=904" },
-      "december-13":  { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=905", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=906" }
-    },
-
-    "independence": {
-      "january-11":   { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=845", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=907", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=908" },
-      "february-22":  { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=909", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=910", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=911" },
-      "april-4":      { "515p": "https://my.livingproof.co/Registration?RegistrationInstanceId=1106" },
-      "april-5":      { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=912", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=913", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=914" },
-      "may-24":       { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=915", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=916", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=917" },
-      "june-28":      { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=918", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=919", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=920" },
-      "august-9":     { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=921", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=922", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=923" },
-      "september-13": { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=949", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=950", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=951" },
-      "october-25":   { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=924", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=926", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=925" },
-      "december-13":  { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=927", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=928", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=929" }
-    },
-
-    "johnson-county": {
-      "january-11":   { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=846", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=930" },
-      "february-22":  { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=931", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=932" },
-      "april-4":      { "500p": "https://my.livingproof.co/Registration?RegistrationInstanceId=1120" },
-      "april-5":      { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=933", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=934" },
-      "may-24":       { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=935", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=936" },
-      "june-28":      { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=937", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=938" },
-      "august-9":     { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=939", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=940" },
-      "september-13": { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=941", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=942" },
-      "october-25":   { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=943", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=944" },
-      "december-13":  { "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=945", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=946" }
-    },
-
-    "lees-summit": {
-      "january-11":   { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=836", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=837", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=838" },
-      "february-22":  { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=839", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=840", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=841" },
-      "april-4":      { "300p": "https://my.livingproof.co/Registration?RegistrationInstanceId=1042", "530p": "https://my.livingproof.co/Registration?RegistrationInstanceId=1044" },
-      "april-5":      { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=842", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=843", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=847" },
-      "may-24":       { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=848", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=849", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=850" },
-      "june-28":      { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=851", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=852", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=853" },
-      "august-9":     { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=854", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=855", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=856" },
-      "september-13": { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=857", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=858", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=859" },
-      "october-25":   { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=952", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=953", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=954" },
-      "december-13":  { "730": "https://my.livingproof.co/Registration?RegistrationInstanceId=860", "900": "https://my.livingproof.co/Registration?RegistrationInstanceId=861", "1050": "https://my.livingproof.co/Registration?RegistrationInstanceId=862" }
-    }
-  };
-
-  // DOM
-  const wrap = document.getElementById('baptism-2026');
-  if (!wrap) return;
-
-  const locGroup  = wrap.querySelector('#ns-step-location .ns-btn-group');
-  const dateStep  = wrap.querySelector('#ns-step-date');
-  const dateGroup = wrap.querySelector('#ns-step-date .ns-btn-group');
-  const noDates   = wrap.querySelector('#ns-no-dates');
-
-  const timeStep  = wrap.querySelector('#ns-step-time');
-  const timeGroup = wrap.querySelector('#ns-step-time .ns-btn-group');
-  const noTimes   = wrap.querySelector('#ns-no-times');
-
-  const regStep   = wrap.querySelector('#ns-step-register');
-  const regBtn    = wrap.querySelector('#ns-register');
-  const resetBtn  = wrap.querySelector('#ns-reset-btn');
-
-  let selected = { location: null, date: null, timeKey: null };
-
-  function clearPressed(root) {
-    Array.from(root.querySelectorAll('.ns-btn')).forEach(b => b.setAttribute('aria-pressed', 'false'));
-  }
-
-  function campusHasDate(lk, dk) {
-    const node = REG_URLS?.[lk]?.[dk];
-    return node && typeof node === 'object' && Object.keys(node).length > 0;
-  }
-
-  function renderLocations() {
-    locGroup.innerHTML = '';
-
-    LOCATIONS.forEach(loc => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'ns-btn';
-      btn.textContent = loc.name;
-      btn.setAttribute('aria-pressed', 'false');
-
-      btn.addEventListener('click', () => {
-        clearPressed(locGroup);
-        btn.setAttribute('aria-pressed', 'true');
-
-        selected = { location: loc.name, date: null, timeKey: null };
-
-        dateGroup.innerHTML = '';
-        timeGroup.innerHTML = '';
-        noDates.classList.add('ns-hidden');
-        noTimes.classList.add('ns-hidden');
-        hide(timeStep); hide(regStep);
-
-        if (loc.special) {
-          hide(dateStep);
-          regBtn.href = CHURCH_HOUSE_URL;
-          show(regStep);
-          return;
-        }
-
-        renderDates();
-      });
-
-      locGroup.appendChild(btn);
-    });
-  }
-
-  function renderDates() {
-    const lk = slug(selected.location);
-
-    let available = DATES
-      .filter(d => campusHasDate(lk, d.key))
-      .filter(d => !isClosedDateISO(d.iso))
-      .sort((a, b) => a.iso.localeCompare(b.iso));
-
-    // NEW: only show next 3 active months (skips empty months automatically)
-    available = filterToNextThreeActiveMonths(available);
-
-    dateGroup.innerHTML = '';
-    show(dateStep);
-    hide(timeStep); hide(regStep);
-
-    if (available.length === 0) {
-      noDates.classList.remove('ns-hidden');
-      return;
+    function hide(el) {
+      if (el) el.setAttribute("hidden", "");
     }
 
-    available.forEach(d => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'ns-btn';
-      btn.textContent = d.label;
-      btn.setAttribute('aria-pressed', 'false');
+    // Hide date once registrations close (N days before baptism)
+    function isClosedDateISO(iso) {
+      const [y, m, d] = iso.split("-").map(Number);
+      const baptismDate = new Date(y, m - 1, d);
+      const closeDate = new Date(baptismDate);
+      closeDate.setDate(closeDate.getDate() - REGISTRATION_CLOSE_DAYS_BEFORE);
 
-      btn.addEventListener('click', () => {
-        clearPressed(dateGroup);
-        btn.setAttribute('aria-pressed', 'true');
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      closeDate.setHours(0, 0, 0, 0);
 
-        selected.date = d;
-        selected.timeKey = null;
-
-        timeGroup.innerHTML = '';
-        noTimes.classList.add('ns-hidden');
-        hide(regStep);
-
-        renderTimes();
-      });
-
-      dateGroup.appendChild(btn);
-    });
-  }
-
-  function renderTimes() {
-    const lk = slug(selected.location);
-    const dk = selected?.date?.key;
-
-    const timesObj = REG_URLS?.[lk]?.[dk];
-    timeGroup.innerHTML = '';
-    show(timeStep);
-
-    if (!timesObj || typeof timesObj !== 'object' || Object.keys(timesObj).length === 0) {
-      noTimes.classList.remove('ns-hidden');
-      return;
+      return today >= closeDate;
     }
 
-    Object.keys(timesObj)
-      .sort((a, b) => timeKeyToMinutes(a) - timeKeyToMinutes(b))
-      .forEach(tk => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'ns-btn';
-        btn.textContent = timeKeyToLabel(tk);
-        btn.setAttribute('aria-pressed', 'false');
+    // NEW behavior: show only the next 3 "active" months that actually have available dates
+    function filterToNextThreeActiveMonths(sortedDates) {
+      const months = [];
+      for (const d of sortedDates) {
+        const ym = d.iso.slice(0, 7); // YYYY-MM
+        if (!months.includes(ym)) months.push(ym);
+        if (months.length >= 3) break;
+      }
+      return sortedDates.filter((d) => months.includes(d.iso.slice(0, 7)));
+    }
 
-        btn.addEventListener('click', () => {
-          clearPressed(timeGroup);
-          btn.setAttribute('aria-pressed', 'true');
+    // Time helpers:
+    // - "730", "900", "1050" => AM
+    // - "300p", "515p", "530p", "500p" => PM
+    function timeKeyToMinutes(key) {
+      const k = String(key).trim().toLowerCase();
+      const isP = k.endsWith("p");
+      const isA = k.endsWith("a");
+      const digits = isP || isA ? k.slice(0, -1) : k;
 
-          selected.timeKey = tk;
-          regBtn.href = timesObj[tk];
+      const num = parseInt(digits, 10);
+      if (!Number.isFinite(num)) return 0;
 
-          // IMPORTANT: no scrollIntoView here (prevents jumping)
-          show(regStep);
+      const str = String(num);
+      const mins = str.length > 2 ? parseInt(str.slice(-2), 10) : 0;
+      const hrs =
+        str.length > 2 ? parseInt(str.slice(0, -2), 10) : parseInt(str, 10);
+
+      let h24 = hrs;
+      if (isP) h24 = (hrs % 12) + 12;
+      else if (isA) h24 = hrs === 12 ? 0 : hrs;
+
+      return h24 * 60 + mins;
+    }
+
+    function timeKeyToLabel(key) {
+      const k = String(key).trim().toLowerCase();
+      const isP = k.endsWith("p");
+      const isA = k.endsWith("a");
+      const digits = isP || isA ? k.slice(0, -1) : k;
+
+      const num = parseInt(digits, 10);
+      if (!Number.isFinite(num)) return String(key);
+
+      const str = String(num);
+      const mins = str.length > 2 ? parseInt(str.slice(-2), 10) : 0;
+      const hrs =
+        str.length > 2 ? parseInt(str.slice(0, -2), 10) : parseInt(str, 10);
+
+      const ampm = isP ? "PM" : "AM";
+      let h12 = hrs % 12;
+      if (h12 === 0) h12 = 12;
+      return `${h12}:${String(mins).padStart(2, "0")} ${ampm}`;
+    }
+
+    const LOCATIONS = [
+      { name: "Blue Springs" },
+      { name: "Crossroads" },
+      { name: "Independence" },
+      { name: "Johnson County" },
+      { name: "Lee's Summit" },
+      { name: "Church House", special: true },
+    ];
+
+    const DATES = [
+      { key: "january-11", label: "January 11", iso: "2026-01-11" },
+      { key: "february-22", label: "February 22", iso: "2026-02-22" },
+      { key: "april-4", label: "April 4", iso: "2026-04-04" },
+      { key: "april-5", label: "April 5", iso: "2026-04-05" },
+      { key: "may-24", label: "May 24", iso: "2026-05-24" },
+      { key: "june-28", label: "June 28", iso: "2026-06-28" },
+      { key: "august-9", label: "August 9", iso: "2026-08-09" },
+      { key: "september-13", label: "September 13", iso: "2026-09-13" },
+      { key: "october-25", label: "October 25", iso: "2026-10-25" },
+      { key: "december-13", label: "December 13", iso: "2026-12-13" },
+    ];
+
+    // FULL dataset (your provided REG_URLS)
+    const REG_URLS = {
+      "blue-springs": {
+        "january-11": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=844",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=863",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=864",
+        },
+        "february-22": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=865",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=866",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=867",
+        },
+        "april-4": {
+          "300p":
+            "https://my.livingproof.co/Registration?RegistrationInstanceId=1114",
+          "515p":
+            "https://my.livingproof.co/Registration?RegistrationInstanceId=1115",
+        },
+        "april-5": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=868",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=869",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=870",
+        },
+        "may-24": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=871",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=872",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=873",
+        },
+        "june-28": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=874",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=875",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=876",
+        },
+        "august-9": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=877",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=878",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=879",
+        },
+        "september-13": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=880",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=881",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=882",
+        },
+        "october-25": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=883",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=884",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=885",
+        },
+        "december-13": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=886",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=887",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=888",
+        },
+      },
+
+      crossroads: {
+        "january-11": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=889",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=890",
+        },
+        "february-22": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=891",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=892",
+        },
+        "april-5": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=1122",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=893",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=894",
+        },
+        "may-24": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=895",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=896",
+        },
+        "june-28": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=897",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=898",
+        },
+        "august-9": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=899",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=900",
+        },
+        "september-13": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=901",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=902",
+        },
+        "october-25": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=903",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=904",
+        },
+        "december-13": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=905",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=906",
+        },
+      },
+
+      independence: {
+        "january-11": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=845",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=907",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=908",
+        },
+        "february-22": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=909",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=910",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=911",
+        },
+        "april-4": {
+          "515p":
+            "https://my.livingproof.co/Registration?RegistrationInstanceId=1106",
+        },
+        "april-5": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=912",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=913",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=914",
+        },
+        "may-24": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=915",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=916",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=917",
+        },
+        "june-28": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=918",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=919",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=920",
+        },
+        "august-9": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=921",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=922",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=923",
+        },
+        "september-13": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=949",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=950",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=951",
+        },
+        "october-25": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=924",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=926",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=925",
+        },
+        "december-13": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=927",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=928",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=929",
+        },
+      },
+
+      "johnson-county": {
+        "january-11": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=846",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=930",
+        },
+        "february-22": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=931",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=932",
+        },
+        "april-4": {
+          "500p":
+            "https://my.livingproof.co/Registration?RegistrationInstanceId=1120",
+        },
+        "april-5": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=933",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=934",
+        },
+        "may-24": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=935",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=936",
+        },
+        "june-28": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=937",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=938",
+        },
+        "august-9": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=939",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=940",
+        },
+        "september-13": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=941",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=942",
+        },
+        "october-25": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=943",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=944",
+        },
+        "december-13": {
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=945",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=946",
+        },
+      },
+
+      "lees-summit": {
+        "january-11": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=836",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=837",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=838",
+        },
+        "february-22": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=839",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=840",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=841",
+        },
+        "april-4": {
+          "300p":
+            "https://my.livingproof.co/Registration?RegistrationInstanceId=1042",
+          "530p":
+            "https://my.livingproof.co/Registration?RegistrationInstanceId=1044",
+        },
+        "april-5": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=842",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=843",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=847",
+        },
+        "may-24": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=848",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=849",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=850",
+        },
+        "june-28": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=851",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=852",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=853",
+        },
+        "august-9": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=854",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=855",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=856",
+        },
+        "september-13": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=857",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=858",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=859",
+        },
+        "october-25": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=952",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=953",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=954",
+        },
+        "december-13": {
+          730: "https://my.livingproof.co/Registration?RegistrationInstanceId=860",
+          900: "https://my.livingproof.co/Registration?RegistrationInstanceId=861",
+          1050: "https://my.livingproof.co/Registration?RegistrationInstanceId=862",
+        },
+      },
+    };
+
+    // DOM
+    const wrap = document.getElementById("baptism-2026");
+    if (!wrap) return;
+
+    const locGroup = wrap.querySelector("#ns-step-location .ns-btn-group");
+    const dateStep = wrap.querySelector("#ns-step-date");
+    const dateGroup = wrap.querySelector("#ns-step-date .ns-btn-group");
+    const noDates = wrap.querySelector("#ns-no-dates");
+
+    const timeStep = wrap.querySelector("#ns-step-time");
+    const timeGroup = wrap.querySelector("#ns-step-time .ns-btn-group");
+    const noTimes = wrap.querySelector("#ns-no-times");
+
+    const regStep = wrap.querySelector("#ns-step-register");
+    const regBtn = wrap.querySelector("#ns-register");
+    const resetBtn = wrap.querySelector("#ns-reset-btn");
+
+    let selected = { location: null, date: null, timeKey: null };
+
+    function clearPressed(root) {
+      Array.from(root.querySelectorAll(".ns-btn")).forEach((b) =>
+        b.setAttribute("aria-pressed", "false"),
+      );
+    }
+
+    function campusHasDate(lk, dk) {
+      const node = REG_URLS?.[lk]?.[dk];
+      return node && typeof node === "object" && Object.keys(node).length > 0;
+    }
+
+    function renderLocations() {
+      locGroup.innerHTML = "";
+
+      LOCATIONS.forEach((loc) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "ns-btn";
+        btn.textContent = loc.name;
+        btn.setAttribute("aria-pressed", "false");
+
+        btn.addEventListener("click", () => {
+          clearPressed(locGroup);
+          btn.setAttribute("aria-pressed", "true");
+
+          selected = { location: loc.name, date: null, timeKey: null };
+
+          dateGroup.innerHTML = "";
+          timeGroup.innerHTML = "";
+          noDates.classList.add("ns-hidden");
+          noTimes.classList.add("ns-hidden");
+          hide(timeStep);
+          hide(regStep);
+
+          if (loc.special) {
+            hide(dateStep);
+            regBtn.href = CHURCH_HOUSE_URL;
+            show(regStep);
+            return;
+          }
+
+          renderDates();
         });
 
-        timeGroup.appendChild(btn);
+        locGroup.appendChild(btn);
       });
-  }
+    }
 
-  function resetAll() {
-    selected = { location: null, date: null, timeKey: null };
-    clearPressed(wrap);
+    function renderDates() {
+      const lk = slug(selected.location);
 
-    dateGroup.innerHTML = '';
-    timeGroup.innerHTML = '';
-    noDates.classList.add('ns-hidden');
-    noTimes.classList.add('ns-hidden');
+      let available = DATES.filter((d) => campusHasDate(lk, d.key))
+        .filter((d) => !isClosedDateISO(d.iso))
+        .sort((a, b) => a.iso.localeCompare(b.iso));
 
-    hide(dateStep); hide(timeStep); hide(regStep);
-    wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+      // NEW: only show next 3 active months (skips empty months automatically)
+      available = filterToNextThreeActiveMonths(available);
 
-  renderLocations();
-  resetBtn.addEventListener('click', resetAll);
-})();
+      dateGroup.innerHTML = "";
+      show(dateStep);
+      hide(timeStep);
+      hide(regStep);
+
+      if (available.length === 0) {
+        noDates.classList.remove("ns-hidden");
+        return;
+      }
+
+      available.forEach((d) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "ns-btn";
+        btn.textContent = d.label;
+        btn.setAttribute("aria-pressed", "false");
+
+        btn.addEventListener("click", () => {
+          clearPressed(dateGroup);
+          btn.setAttribute("aria-pressed", "true");
+
+          selected.date = d;
+          selected.timeKey = null;
+
+          timeGroup.innerHTML = "";
+          noTimes.classList.add("ns-hidden");
+          hide(regStep);
+
+          renderTimes();
+        });
+
+        dateGroup.appendChild(btn);
+      });
+    }
+
+    function renderTimes() {
+      const lk = slug(selected.location);
+      const dk = selected?.date?.key;
+
+      const timesObj = REG_URLS?.[lk]?.[dk];
+      timeGroup.innerHTML = "";
+      show(timeStep);
+
+      if (
+        !timesObj ||
+        typeof timesObj !== "object" ||
+        Object.keys(timesObj).length === 0
+      ) {
+        noTimes.classList.remove("ns-hidden");
+        return;
+      }
+
+      Object.keys(timesObj)
+        .sort((a, b) => timeKeyToMinutes(a) - timeKeyToMinutes(b))
+        .forEach((tk) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "ns-btn";
+          btn.textContent = timeKeyToLabel(tk);
+          btn.setAttribute("aria-pressed", "false");
+
+          btn.addEventListener("click", () => {
+            clearPressed(timeGroup);
+            btn.setAttribute("aria-pressed", "true");
+
+            selected.timeKey = tk;
+            regBtn.href = timesObj[tk];
+
+            // IMPORTANT: no scrollIntoView here (prevents jumping)
+            show(regStep);
+          });
+
+          timeGroup.appendChild(btn);
+        });
+    }
+
+    function resetAll() {
+      selected = { location: null, date: null, timeKey: null };
+      clearPressed(wrap);
+
+      dateGroup.innerHTML = "";
+      timeGroup.innerHTML = "";
+      noDates.classList.add("ns-hidden");
+      noTimes.classList.add("ns-hidden");
+
+      hide(dateStep);
+      hide(timeStep);
+      hide(regStep);
+      wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    renderLocations();
+    resetBtn.addEventListener("click", resetAll);
+  })();
 </script>

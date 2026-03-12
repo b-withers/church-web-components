@@ -1,341 +1,665 @@
 <!-- Next Steps registration component (complete) -->
 <div class="registration-component">
-
   <!-- Locations row -->
   <div class="locations-container" id="locationsContainer">
-    <button class="location-button" data-location="blue-springs" type="button">Blue Springs</button>
-    <button class="location-button" data-location="crossroads" type="button">Crossroads</button>
-    <button class="location-button" data-location="independence" type="button">Independence</button>
-    <button class="location-button" data-location="johnson-county" type="button">Johnson County</button>
-    <button class="location-button" data-location="lees-summit" type="button">Lee's Summit</button>
-    <button class="location-button" data-location="online" type="button">Online</button>
+    <button class="location-button" data-location="blue-springs" type="button">
+      Blue Springs
+    </button>
+    <button class="location-button" data-location="crossroads" type="button">
+      Crossroads
+    </button>
+    <button class="location-button" data-location="independence" type="button">
+      Independence
+    </button>
+    <button
+      class="location-button"
+      data-location="johnson-county"
+      type="button"
+    >
+      Johnson County
+    </button>
+    <button class="location-button" data-location="lees-summit" type="button">
+      Lee's Summit
+    </button>
+    <button class="location-button" data-location="online" type="button">
+      Online
+    </button>
   </div>
 
   <!-- Sentence (hidden until selection) -->
-  <div class="registration-sentence" id="registrationSentence">What month would you like to join us for Next Steps?</div>
+  <div class="registration-sentence" id="registrationSentence">
+    What month would you like to join us for Next Steps?
+  </div>
 
   <!-- Months panels (one per location) -->
   <div id="months-blue-springs" class="months-container">
     <div class="months-grid">
-      <a class="month-button" data-month="1" href="https://my.livingproof.co/Registration/bspnscjanuary2026" target="_blank">January</a>
-      <a class="month-button" data-month="3" href="https://my.livingproof.co/Registration/bspnscmarch2026" target="_blank">March</a>
-      <a class="month-button" data-month="5" href="https://my.livingproof.co/Registration/bspnscmay2026" target="_blank">May</a>
-      <a class="month-button" data-month="7" href="https://my.livingproof.co/Registration/bspnscjuly2026" target="_blank">July</a>
-      <a class="month-button" data-month="9" href="https://my.livingproof.co/Registration/bspnscsept2026" target="_blank">September</a>
-      <a class="month-button" data-month="11" href="https://my.livingproof.co/Registration/bspnscnov2026" target="_blank">November</a>
+      <a
+        class="month-button"
+        data-month="1"
+        href="https://my.livingproof.co/Registration/bspnscjanuary2026"
+        target="_blank"
+        >January</a
+      >
+      <a
+        class="month-button"
+        data-month="3"
+        href="https://my.livingproof.co/Registration/bspnscmarch2026"
+        target="_blank"
+        >March</a
+      >
+      <a
+        class="month-button"
+        data-month="5"
+        href="https://my.livingproof.co/Registration/bspnscmay2026"
+        target="_blank"
+        >May</a
+      >
+      <a
+        class="month-button"
+        data-month="7"
+        href="https://my.livingproof.co/Registration/bspnscjuly2026"
+        target="_blank"
+        >July</a
+      >
+      <a
+        class="month-button"
+        data-month="9"
+        href="https://my.livingproof.co/Registration/bspnscsept2026"
+        target="_blank"
+        >September</a
+      >
+      <a
+        class="month-button"
+        data-month="11"
+        href="https://my.livingproof.co/Registration/bspnscnov2026"
+        target="_blank"
+        >November</a
+      >
     </div>
   </div>
 
   <div id="months-crossroads" class="months-container">
     <div class="months-grid">
-      <a class="month-button" data-month="1" href="https://my.livingproof.co/Registration/crsnscjan2026" target="_blank">January</a>
-      <a class="month-button" data-month="3" href="https://my.livingproof.co/Registration/crsnscmar2026" target="_blank">March</a>
-      <a class="month-button" data-month="5" href="https://my.livingproof.co/Registration/crsnscmay2026" target="_blank">May</a>
-      <a class="month-button" data-month="7" href="https://my.livingproof.co/Registration/crsnscjuly2026" target="_blank">July</a>
-      <a class="month-button" data-month="9" href="https://my.livingproof.co/Registration/crsnscsept2026" target="_blank">September</a>
-      <a class="month-button" data-month="11" href="https://my.livingproof.co/Registration/crsnscnov2026" target="_blank">November</a>
+      <a
+        class="month-button"
+        data-month="1"
+        href="https://my.livingproof.co/Registration/crsnscjan2026"
+        target="_blank"
+        >January</a
+      >
+      <a
+        class="month-button"
+        data-month="3"
+        href="https://my.livingproof.co/Registration/crsnscmar2026"
+        target="_blank"
+        >March</a
+      >
+      <a
+        class="month-button"
+        data-month="5"
+        href="https://my.livingproof.co/Registration/crsnscmay2026"
+        target="_blank"
+        >May</a
+      >
+      <a
+        class="month-button"
+        data-month="7"
+        href="https://my.livingproof.co/Registration/crsnscjuly2026"
+        target="_blank"
+        >July</a
+      >
+      <a
+        class="month-button"
+        data-month="9"
+        href="https://my.livingproof.co/Registration/crsnscsept2026"
+        target="_blank"
+        >September</a
+      >
+      <a
+        class="month-button"
+        data-month="11"
+        href="https://my.livingproof.co/Registration/crsnscnov2026"
+        target="_blank"
+        >November</a
+      >
     </div>
   </div>
 
   <div id="months-independence" class="months-container">
     <div class="months-grid">
-      <a class="month-button" data-month="2" href="https://my.livingproof.co/Registration/indnscfeb2026" target="_blank">February</a>
-      <a class="month-button" data-month="4" href="https://my.livingproof.co/Registration/indnscapril2026" target="_blank">April</a>
-      <a class="month-button" data-month="6" href="https://my.livingproof.co/Registration/indnscjune2026" target="_blank">June</a>
-      <a class="month-button" data-month="8" href="https://my.livingproof.co/Registration/indnscaug2026" target="_blank">August</a>
-      <a class="month-button" data-month="10" href="https://my.livingproof.co/Registration/indnscoct2026" target="_blank">October</a>
+      <a
+        class="month-button"
+        data-month="2"
+        href="https://my.livingproof.co/Registration/indnscfeb2026"
+        target="_blank"
+        >February</a
+      >
+      <a
+        class="month-button"
+        data-month="4"
+        href="https://my.livingproof.co/Registration/indnscapril2026"
+        target="_blank"
+        >April</a
+      >
+      <a
+        class="month-button"
+        data-month="6"
+        href="https://my.livingproof.co/Registration/indnscjune2026"
+        target="_blank"
+        >June</a
+      >
+      <a
+        class="month-button"
+        data-month="8"
+        href="https://my.livingproof.co/Registration/indnscaug2026"
+        target="_blank"
+        >August</a
+      >
+      <a
+        class="month-button"
+        data-month="10"
+        href="https://my.livingproof.co/Registration/indnscoct2026"
+        target="_blank"
+        >October</a
+      >
     </div>
   </div>
 
   <div id="months-johnson-county" class="months-container">
     <div class="months-grid">
-      <a class="month-button" data-month="1" href="https://my.livingproof.co/Registration/jcknscjan2026" target="_blank">January</a>
-      <a class="month-button" data-month="2" href="https://my.livingproof.co/Registration/jcknscfeb2026" target="_blank">February</a>
-      <a class="month-button" data-month="3" href="https://my.livingproof.co/Registration/jcknscmar2026" target="_blank">March</a>
-      <a class="month-button" data-month="5" href="https://my.livingproof.co/Registration/jcknscmay2026" target="_blank">May</a>
-      <a class="month-button" data-month="6" href="https://my.livingproof.co/Registration/jcknscjune2026" target="_blank">June</a>
-      <a class="month-button" data-month="7" href="https://my.livingproof.co/Registration/jcknscjuly2026" target="_blank">July</a>
-      <a class="month-button" data-month="8" href="https://my.livingproof.co/Registration/jcknscaug2026" target="_blank">August</a>
-      <a class="month-button" data-month="9" href="https://my.livingproof.co/Registration/jcknscsept2026" target="_blank">September</a>
-      <a class="month-button" data-month="10" href="https://my.livingproof.co/Registration/jcknscoct2026" target="_blank">October</a>
-      <a class="month-button" data-month="11" href="https://my.livingproof.co/Registration/jcknscnov2026" target="_blank">November</a>
+      <a
+        class="month-button"
+        data-month="1"
+        href="https://my.livingproof.co/Registration/jcknscjan2026"
+        target="_blank"
+        >January</a
+      >
+      <a
+        class="month-button"
+        data-month="2"
+        href="https://my.livingproof.co/Registration/jcknscfeb2026"
+        target="_blank"
+        >February</a
+      >
+      <a
+        class="month-button"
+        data-month="3"
+        href="https://my.livingproof.co/Registration/jcknscmar2026"
+        target="_blank"
+        >March</a
+      >
+      <a
+        class="month-button"
+        data-month="5"
+        href="https://my.livingproof.co/Registration/jcknscmay2026"
+        target="_blank"
+        >May</a
+      >
+      <a
+        class="month-button"
+        data-month="6"
+        href="https://my.livingproof.co/Registration/jcknscjune2026"
+        target="_blank"
+        >June</a
+      >
+      <a
+        class="month-button"
+        data-month="7"
+        href="https://my.livingproof.co/Registration/jcknscjuly2026"
+        target="_blank"
+        >July</a
+      >
+      <a
+        class="month-button"
+        data-month="8"
+        href="https://my.livingproof.co/Registration/jcknscaug2026"
+        target="_blank"
+        >August</a
+      >
+      <a
+        class="month-button"
+        data-month="9"
+        href="https://my.livingproof.co/Registration/jcknscsept2026"
+        target="_blank"
+        >September</a
+      >
+      <a
+        class="month-button"
+        data-month="10"
+        href="https://my.livingproof.co/Registration/jcknscoct2026"
+        target="_blank"
+        >October</a
+      >
+      <a
+        class="month-button"
+        data-month="11"
+        href="https://my.livingproof.co/Registration/jcknscnov2026"
+        target="_blank"
+        >November</a
+      >
     </div>
   </div>
 
   <div id="months-lees-summit" class="months-container">
     <div class="months-grid">
-      <a class="month-button" data-month="1" href="https://my.livingproof.co/Registration/lstnscjanuary2026" target="_blank">January</a>
-      <a class="month-button" data-month="2" href="https://my.livingproof.co/Registration/nscfebruary2026" target="_blank">February</a>
-      <a class="month-button" data-month="3" href="https://my.livingproof.co/Registration/nscmarch2026" target="_blank">March</a>
-      <a class="month-button" data-month="5" href="https://my.livingproof.co/Registration/nscmay2026" target="_blank">May</a>
-      <a class="month-button" data-month="6" href="https://my.livingproof.co/Registration/nscjune2026" target="_blank">June</a>
-      <a class="month-button" data-month="7" href="https://my.livingproof.co/Registration/nscjuly2026" target="_blank">July</a>
-      <a class="month-button" data-month="8" href="https://my.livingproof.co/Registration/nscaugust2026" target="_blank">August</a>
-      <a class="month-button" data-month="9" href="https://my.livingproof.co/Registration/nscseptember2026" target="_blank">September</a>
-      <a class="month-button" data-month="10" href="https://my.livingproof.co/Registration/nscoctober2026" target="_blank">October</a>
-      <a class="month-button" data-month="11" href="https://my.livingproof.co/Registration/nscnovember2026" target="_blank">November</a>
+      <a
+        class="month-button"
+        data-month="1"
+        href="https://my.livingproof.co/Registration/lstnscjanuary2026"
+        target="_blank"
+        >January</a
+      >
+      <a
+        class="month-button"
+        data-month="2"
+        href="https://my.livingproof.co/Registration/nscfebruary2026"
+        target="_blank"
+        >February</a
+      >
+      <a
+        class="month-button"
+        data-month="3"
+        href="https://my.livingproof.co/Registration/nscmarch2026"
+        target="_blank"
+        >March</a
+      >
+      <a
+        class="month-button"
+        data-month="5"
+        href="https://my.livingproof.co/Registration/nscmay2026"
+        target="_blank"
+        >May</a
+      >
+      <a
+        class="month-button"
+        data-month="6"
+        href="https://my.livingproof.co/Registration/nscjune2026"
+        target="_blank"
+        >June</a
+      >
+      <a
+        class="month-button"
+        data-month="7"
+        href="https://my.livingproof.co/Registration/nscjuly2026"
+        target="_blank"
+        >July</a
+      >
+      <a
+        class="month-button"
+        data-month="8"
+        href="https://my.livingproof.co/Registration/nscaugust2026"
+        target="_blank"
+        >August</a
+      >
+      <a
+        class="month-button"
+        data-month="9"
+        href="https://my.livingproof.co/Registration/nscseptember2026"
+        target="_blank"
+        >September</a
+      >
+      <a
+        class="month-button"
+        data-month="10"
+        href="https://my.livingproof.co/Registration/nscoctober2026"
+        target="_blank"
+        >October</a
+      >
+      <a
+        class="month-button"
+        data-month="11"
+        href="https://my.livingproof.co/Registration/nscnovember2026"
+        target="_blank"
+        >November</a
+      >
     </div>
   </div>
 
   <div id="months-online" class="months-container">
     <div class="months-grid">
-      <a class="month-button" data-month="1" href="https://my.livingproof.co/Registration/onlnscjan2026" target="_blank">January</a>
-      <a class="month-button" data-month="2" href="https://my.livingproof.co/Registration/onlnscfeb2026" target="_blank">February</a>
-      <a class="month-button" data-month="3" href="https://my.livingproof.co/Registration/onlnscmar2026" target="_blank">March</a>
-      <a class="month-button" data-month="4" href="https://my.livingproof.co/Registration/onlnscapril2026" target="_blank">April</a>
-      <a class="month-button" data-month="5" href="https://my.livingproof.co/Registration/onlnscmay2026" target="_blank">May</a>
-      <a class="month-button" data-month="6" href="https://my.livingproof.co/Registration/onlnscjune2026" target="_blank">June</a>
-      <a class="month-button" data-month="7" href="https://my.livingproof.co/Registration/onlnscjuly2026" target="_blank">July</a>
-      <a class="month-button" data-month="8" href="https://my.livingproof.co/Registration/onlnscaug2026" target="_blank">August</a>
-      <a class="month-button" data-month="9" href="https://my.livingproof.co/Registration/onlnscsept2026" target="_blank">September</a>
-      <a class="month-button" data-month="10" href="https://my.livingproof.co/Registration/onlnscoct2026" target="_blank">October</a>
-      <a class="month-button" data-month="11" href="https://my.livingproof.co/Registration/onlnscnov2026" target="_blank">November</a>
+      <a
+        class="month-button"
+        data-month="1"
+        href="https://my.livingproof.co/Registration/onlnscjan2026"
+        target="_blank"
+        >January</a
+      >
+      <a
+        class="month-button"
+        data-month="2"
+        href="https://my.livingproof.co/Registration/onlnscfeb2026"
+        target="_blank"
+        >February</a
+      >
+      <a
+        class="month-button"
+        data-month="3"
+        href="https://my.livingproof.co/Registration/onlnscmar2026"
+        target="_blank"
+        >March</a
+      >
+      <a
+        class="month-button"
+        data-month="4"
+        href="https://my.livingproof.co/Registration/onlnscapril2026"
+        target="_blank"
+        >April</a
+      >
+      <a
+        class="month-button"
+        data-month="5"
+        href="https://my.livingproof.co/Registration/onlnscmay2026"
+        target="_blank"
+        >May</a
+      >
+      <a
+        class="month-button"
+        data-month="6"
+        href="https://my.livingproof.co/Registration/onlnscjune2026"
+        target="_blank"
+        >June</a
+      >
+      <a
+        class="month-button"
+        data-month="7"
+        href="https://my.livingproof.co/Registration/onlnscjuly2026"
+        target="_blank"
+        >July</a
+      >
+      <a
+        class="month-button"
+        data-month="8"
+        href="https://my.livingproof.co/Registration/onlnscaug2026"
+        target="_blank"
+        >August</a
+      >
+      <a
+        class="month-button"
+        data-month="9"
+        href="https://my.livingproof.co/Registration/onlnscsept2026"
+        target="_blank"
+        >September</a
+      >
+      <a
+        class="month-button"
+        data-month="10"
+        href="https://my.livingproof.co/Registration/onlnscoct2026"
+        target="_blank"
+        >October</a
+      >
+      <a
+        class="month-button"
+        data-month="11"
+        href="https://my.livingproof.co/Registration/onlnscnov2026"
+        target="_blank"
+        >November</a
+      >
     </div>
   </div>
-
 </div>
 
 <style>
-/* --- Layout & spacing --- */
-.registration-component {
-  margin: 25px 0;
-  text-align: center;
-  font-family: "proxima-nova", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
+  /* --- Layout & spacing --- */
+  .registration-component {
+    margin: 25px 0;
+    text-align: center;
+    font-family:
+      "proxima-nova",
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial;
+  }
 
-/* Locations row */
-.locations-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 10px;
-  align-items: center;
-}
+  /* Locations row */
+  .locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+  }
 
-/* Location button style */
-.location-button {
-  background-color: #ffffff;
-  color: #053B5A;
-  font-weight: 700;
-  font-size: 18px;
-  border: 2px solid #053B5A;
-  padding: 14px 22px;
-  cursor: pointer;
-  transition: all 0.22s ease;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
+  /* Location button style */
+  .location-button {
+    background-color: #ffffff;
+    color: #053b5a;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid #053b5a;
+    padding: 14px 22px;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
 
-.location-button:hover {
-  background-color: #EAF6FB;
-  color: #053B5A;
-}
+  .location-button:hover {
+    background-color: #eaf6fb;
+    color: #053b5a;
+  }
 
-/* Active (selected) */
-.location-button.active {
-  background-color: #053B5A;
-  color: #ffffff;
-  border: 2px solid #D4AF37;
-  box-shadow: 0 6px 14px rgba(5,59,90,0.15);
-}
+  /* Active (selected) */
+  .location-button.active {
+    background-color: #053b5a;
+    color: #ffffff;
+    border: 2px solid #d4af37;
+    box-shadow: 0 6px 14px rgba(5, 59, 90, 0.15);
+  }
 
-/* sentence */
-.registration-sentence {
-  display: none; /* shown only after selecting campus */
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: #000000;
-  font-weight: 600;
-}
+  /* sentence */
+  .registration-sentence {
+    display: none; /* shown only after selecting campus */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+  }
 
-/* months container */
-.months-container {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.28s ease;
-  margin-top: 15px;
-  margin-bottom: 25px;
-}
+  /* months container */
+  .months-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.28s ease;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
 
-/* visible months */
-.months-container.visible {
-  display: flex;
-  opacity: 1;
-  flex-direction: column;
-  align-items: center;
-}
+  /* visible months */
+  .months-container.visible {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* grid of months */
-.months-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px 12px;
-  justify-items: center;
-  width: 100%;
-  max-width: 900px;
-}
-
-/* month buttons */
-.month-button {
-  background-color: #F1FCFF; /* light blue */
-  color: #053B5A;
-  font-weight: 700;
-  font-size: 14px;
-  height: 52px;
-  min-width: 140px;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #053B5A;
-  border-radius: 6px;
-  transition: all 0.18s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* hover */
-.month-button:hover {
-  background-color: #053B5A;
-  color: #ffffff;
-}
-
-/* --- Mobile: 2-up grid, wider buttons, aligned under selected location --- */
-@media (max-width: 768px) {
-  .locations-container { flex-direction: column; align-items: center; }
-  .location-button { width: 100%; max-width: 320px; }
-
+  /* grid of months */
   .months-grid {
-    grid-template-columns: repeat(2, 1fr); /* two columns */
-    gap: 12px;
-    max-width: 320px; /* align with location button width */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px 12px;
+    justify-items: center;
+    width: 100%;
+    max-width: 900px;
   }
 
+  /* month buttons */
   .month-button {
-    min-width: 145px;
-    height: 56px;
-    font-size: 15px;
+    background-color: #f1fcff; /* light blue */
+    color: #053b5a;
+    font-weight: 700;
+    font-size: 14px;
+    height: 52px;
+    min-width: 140px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #053b5a;
+    border-radius: 6px;
+    transition: all 0.18s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
-}
 
-/* extra small phones */
-@media (max-width: 420px) {
-  .months-grid { max-width: 260px; gap: 10px; }
-  .month-button { min-width: 120px; height: 54px; font-size: 14px; }
-}
+  /* hover */
+  .month-button:hover {
+    background-color: #053b5a;
+    color: #ffffff;
+  }
+
+  /* --- Mobile: 2-up grid, wider buttons, aligned under selected location --- */
+  @media (max-width: 768px) {
+    .locations-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .location-button {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .months-grid {
+      grid-template-columns: repeat(2, 1fr); /* two columns */
+      gap: 12px;
+      max-width: 320px; /* align with location button width */
+    }
+
+    .month-button {
+      min-width: 145px;
+      height: 56px;
+      font-size: 15px;
+    }
+  }
+
+  /* extra small phones */
+  @media (max-width: 420px) {
+    .months-grid {
+      max-width: 260px;
+      gap: 10px;
+    }
+    .month-button {
+      min-width: 120px;
+      height: 54px;
+      font-size: 14px;
+    }
+  }
 </style>
 
 <script>
-(function () {
-  // config
-  const HIDE_MONTHS_FOR_YEAR = 2026; // only hide past months when this year is active
-  const MOBILE_BREAKPOINT = 768;
+  (function () {
+    // config
+    const HIDE_MONTHS_FOR_YEAR = 2026; // only hide past months when this year is active
+    const MOBILE_BREAKPOINT = 768;
 
-  const now = new Date();
-  const currentYear = now.getFullYear();
-  const currentMonth = now.getMonth() + 1; // 1..12
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth() + 1; // 1..12
 
-  const locationsContainer = document.getElementById('locationsContainer');
-  const locationButtons = document.querySelectorAll('.location-button');
-  const monthsContainers = document.querySelectorAll('.months-container');
-  const sentence = document.getElementById('registrationSentence');
+    const locationsContainer = document.getElementById("locationsContainer");
+    const locationButtons = document.querySelectorAll(".location-button");
+    const monthsContainers = document.querySelectorAll(".months-container");
+    const sentence = document.getElementById("registrationSentence");
 
-  // Hide past months per-campus (only hide month buttons that exist)
-  document.querySelectorAll('.month-button').forEach(btn => {
-    const monthAttr = btn.getAttribute('data-month');
-    if (!monthAttr) return;
-    const month = parseInt(monthAttr, 10);
-    if (HIDE_MONTHS_FOR_YEAR === currentYear && month < currentMonth) {
-      btn.style.display = 'none';
-    }
-  });
-
-  // Helper: place active months container in correct location depending on viewport
-  function placeActiveSection(activeSection, clickedButton) {
-    if (!activeSection || !clickedButton) return;
-    if (window.innerWidth <= MOBILE_BREAKPOINT) {
-      // insert after clicked button (so months are under that button)
-      clickedButton.insertAdjacentElement('afterend', activeSection);
-    } else {
-      // insert after full locations row (centered under all locations)
-      locationsContainer.insertAdjacentElement('afterend', activeSection);
-    }
-  }
-
-  // Close (hide) everything
-  function closeAll() {
-    locationButtons.forEach(b => b.classList.remove('active'));
-    monthsContainers.forEach(c => {
-      c.classList.remove('visible');
-      // keep element in DOM but hidden (display controlled by CSS class)
-      // No need to change DOM location here.
-    });
-    sentence.style.display = 'none';
-  }
-
-  // Click handler
-  locationButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const location = btn.dataset.location;
-      if (!location) return;
-      const targetId = 'months-' + location;
-      const activeSection = document.getElementById(targetId);
-
-      const alreadyOpen = btn.classList.contains('active');
-
-      // If already open -> close all (toggle)
-      if (alreadyOpen) {
-        closeAll();
-        return;
-      }
-
-      // Otherwise open this one
-      closeAll(); // clear previous
-      btn.classList.add('active');
-
-      // Place and show sentence + months
-      if (activeSection) {
-        placeActiveSection(activeSection, btn);
-        // ensure sentence shown above months
-        activeSection.insertAdjacentElement('beforebegin', sentence);
-        sentence.style.display = 'block';
-
-        // show months
-        activeSection.classList.add('visible');
-
-        // accessibility: move focus to months container (optional)
-        // activeSection.setAttribute('tabindex', '-1');
-        // activeSection.focus();
+    // Hide past months per-campus (only hide month buttons that exist)
+    document.querySelectorAll(".month-button").forEach((btn) => {
+      const monthAttr = btn.getAttribute("data-month");
+      if (!monthAttr) return;
+      const month = parseInt(monthAttr, 10);
+      if (HIDE_MONTHS_FOR_YEAR === currentYear && month < currentMonth) {
+        btn.style.display = "none";
       }
     });
-  });
 
-  // On load ensure initial state (no open)
-  closeAll();
-
-  // Handle resizing: if a months container is visible, re-place it correctly
-  window.addEventListener('resize', () => {
-    const visible = document.querySelector('.months-container.visible');
-    const activeBtn = document.querySelector('.location-button.active');
-    if (visible && activeBtn) {
-      placeActiveSection(visible, activeBtn);
-      visible.insertAdjacentElement('beforebegin', sentence);
-    } else {
-      // if none visible, hide sentence
-      sentence.style.display = 'none';
+    // Helper: place active months container in correct location depending on viewport
+    function placeActiveSection(activeSection, clickedButton) {
+      if (!activeSection || !clickedButton) return;
+      if (window.innerWidth <= MOBILE_BREAKPOINT) {
+        // insert after clicked button (so months are under that button)
+        clickedButton.insertAdjacentElement("afterend", activeSection);
+      } else {
+        // insert after full locations row (centered under all locations)
+        locationsContainer.insertAdjacentElement("afterend", activeSection);
+      }
     }
-  });
 
-  // Optional: keyboard accessibility for Enter/Space on buttons
-  locationButtons.forEach(btn => {
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        btn.click();
+    // Close (hide) everything
+    function closeAll() {
+      locationButtons.forEach((b) => b.classList.remove("active"));
+      monthsContainers.forEach((c) => {
+        c.classList.remove("visible");
+        // keep element in DOM but hidden (display controlled by CSS class)
+        // No need to change DOM location here.
+      });
+      sentence.style.display = "none";
+    }
+
+    // Click handler
+    locationButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const location = btn.dataset.location;
+        if (!location) return;
+        const targetId = "months-" + location;
+        const activeSection = document.getElementById(targetId);
+
+        const alreadyOpen = btn.classList.contains("active");
+
+        // If already open -> close all (toggle)
+        if (alreadyOpen) {
+          closeAll();
+          return;
+        }
+
+        // Otherwise open this one
+        closeAll(); // clear previous
+        btn.classList.add("active");
+
+        // Place and show sentence + months
+        if (activeSection) {
+          placeActiveSection(activeSection, btn);
+          // ensure sentence shown above months
+          activeSection.insertAdjacentElement("beforebegin", sentence);
+          sentence.style.display = "block";
+
+          // show months
+          activeSection.classList.add("visible");
+
+          // accessibility: move focus to months container (optional)
+          // activeSection.setAttribute('tabindex', '-1');
+          // activeSection.focus();
+        }
+      });
+    });
+
+    // On load ensure initial state (no open)
+    closeAll();
+
+    // Handle resizing: if a months container is visible, re-place it correctly
+    window.addEventListener("resize", () => {
+      const visible = document.querySelector(".months-container.visible");
+      const activeBtn = document.querySelector(".location-button.active");
+      if (visible && activeBtn) {
+        placeActiveSection(visible, activeBtn);
+        visible.insertAdjacentElement("beforebegin", sentence);
+      } else {
+        // if none visible, hide sentence
+        sentence.style.display = "none";
       }
     });
-  });
-})();
+
+    // Optional: keyboard accessibility for Enter/Space on buttons
+    locationButtons.forEach((btn) => {
+      btn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+  })();
 </script>

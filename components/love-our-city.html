@@ -1,157 +1,159 @@
 <style>
-.loc-wrap {
-  font-family: "Proxima Nova", Arial, sans-serif;
-  background: #FFFFFF;
-  padding: 32px 20px 48px;
-  text-align: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  scroll-margin-top: 120px;
-}
+  .loc-wrap {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    background: #ffffff;
+    padding: 32px 20px 48px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    scroll-margin-top: 120px;
+  }
 
-/* HEADER */
-.loc-title {
-  font-size: 42px;
-  font-weight: 800;
-  color: #123F5B;
-  margin-bottom: 2px;
-  letter-spacing: -0.5px;
-}
-
-.loc-subtitle {
-  font-size: 17px;
-  color: #123F5B;
-  margin-bottom: 16px;
-  opacity: 0.75;
-}
-
-/* STEP TITLES */
-.loc-step h3 {
-  font-size: 19px;
-  font-weight: 700;
-  color: #0F6E8C;
-  margin-bottom: 10px;
-}
-
-.loc-step {
-  margin-bottom: 28px;
-}
-
-/* DESKTOP GRID */
-.loc-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-/* BUTTON BASE */
-.loc-btn,
-.loc-project-btn {
-  background: #FFFFFF;
-  color: #123F5B;
-  border: 2px solid #123F5B;
-  padding: 14px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 15px;
-  width: 100%;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  white-space: normal;
-  word-break: break-word;
-  transition: all 0.25s ease;
-}
-
-/* HOVER */
-.loc-btn:hover,
-.loc-project-btn:hover {
-  background: #123F5B;
-  color: #FFFFFF;
-}
-
-/* ACTIVE */
-.loc-active {
-  background: #123F5B !important;
-  color: #FFFFFF !important;
-}
-
-/* FADED */
-.loc-faded {
-  opacity: 0.35;
-}
-
-/* ACCESSIBLE FOCUS */
-.loc-btn:focus-visible,
-.loc-project-btn:focus-visible,
-.loc-reset:focus-visible,
-.loc-register:focus-visible {
-  outline: 2px solid #0F6E8C;
-  outline-offset: 3px;
-}
-
-/* REGISTER BUTTON */
-.loc-register {
-  margin-top: 12px;
-  background: #123F5B;
-  color: #FFFFFF;
-  border: none;
-  padding: 12px 26px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.2s ease;
-}
-
-.loc-register:hover {
-  background: #0F6E8C;
-}
-
-/* RESET */
-.loc-reset {
-  margin-top: 16px;
-  background: transparent;
-  border: 1px solid #123F5B;
-  color: #123F5B;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.loc-reset:hover {
-  background: #123F5B;
-  color: #FFFFFF;
-}
-
-.loc-hidden {
-  display: none;
-}
-
-/* MOBILE STACK */
-@media (max-width: 768px) {
+  /* HEADER */
   .loc-title {
-    font-size: 32px;
+    font-size: 42px;
+    font-weight: 800;
+    color: #123f5b;
+    margin-bottom: 2px;
+    letter-spacing: -0.5px;
   }
 
+  .loc-subtitle {
+    font-size: 17px;
+    color: #123f5b;
+    margin-bottom: 16px;
+    opacity: 0.75;
+  }
+
+  /* STEP TITLES */
+  .loc-step h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #0f6e8c;
+    margin-bottom: 10px;
+  }
+
+  .loc-step {
+    margin-bottom: 28px;
+  }
+
+  /* DESKTOP GRID */
   .loc-buttons {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    max-width: 820px;
+    margin: 0 auto;
   }
 
+  /* BUTTON BASE */
   .loc-btn,
   .loc-project-btn {
-    min-height: auto;
+    background: #ffffff;
+    color: #123f5b;
+    border: 2px solid #123f5b;
+    padding: 14px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    transition: all 0.25s ease;
   }
-}
+
+  /* HOVER */
+  .loc-btn:hover,
+  .loc-project-btn:hover {
+    background: #123f5b;
+    color: #ffffff;
+  }
+
+  /* ACTIVE */
+  .loc-active {
+    background: #123f5b !important;
+    color: #ffffff !important;
+  }
+
+  /* FADED */
+  .loc-faded {
+    opacity: 0.35;
+  }
+
+  /* ACCESSIBLE FOCUS */
+  .loc-btn:focus-visible,
+  .loc-project-btn:focus-visible,
+  .loc-reset:focus-visible,
+  .loc-register:focus-visible {
+    outline: 2px solid #0f6e8c;
+    outline-offset: 3px;
+  }
+
+  /* REGISTER BUTTON */
+  .loc-register {
+    margin-top: 12px;
+    background: #123f5b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s ease;
+  }
+
+  .loc-register:hover {
+    background: #0f6e8c;
+  }
+
+  /* RESET */
+  .loc-reset {
+    margin-top: 16px;
+    background: transparent;
+    border: 1px solid #123f5b;
+    color: #123f5b;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .loc-reset:hover {
+    background: #123f5b;
+    color: #ffffff;
+  }
+
+  .loc-hidden {
+    display: none;
+  }
+
+  /* MOBILE STACK */
+  @media (max-width: 768px) {
+    .loc-title {
+      font-size: 32px;
+    }
+
+    .loc-buttons {
+      grid-template-columns: 1fr;
+    }
+
+    .loc-btn,
+    .loc-project-btn {
+      min-height: auto;
+    }
+  }
 </style>
 
 <div class="loc-wrap" id="loveOurCityTop">
   <div class="loc-title">Love Our City</div>
-  <div class="loc-subtitle">Choose your campus and find a project to serve.</div>
+  <div class="loc-subtitle">
+    Choose your campus and find a project to serve.
+  </div>
 
   <div class="loc-step">
     <h3>Select Your Campus</h3>
@@ -165,7 +167,9 @@
 
   <div class="loc-step loc-hidden" id="registerStep">
     <h3>Register</h3>
-    <button class="loc-register" id="registerBtn">Register for This Project</button>
+    <button class="loc-register" id="registerBtn">
+      Register for This Project
+    </button>
     <div>
       <button class="loc-reset loc-hidden" id="resetBtn">Start Over</button>
     </div>
@@ -173,153 +177,209 @@
 </div>
 
 <script>
-setTimeout(function() {
+  setTimeout(function () {
+    const loveOurCityData = {
+      "Blue Springs Campus": [
+        {
+          name: "Abundant Life Blue Springs - First Responders Breakfast Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1085",
+        },
+        {
+          name: "City of Blue Springs - Mulching City Buildings Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1018",
+        },
+        {
+          name: "City of Blue Springs - Paint Tunnel Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1062",
+        },
+        {
+          name: "City of Blue Springs - Mulch Rotary Park Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1082",
+        },
+        {
+          name: "Plaza Heights Christian Academy - Playground Mulching Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1083",
+        },
+        {
+          name: "William Bryant Elementary - Bobcat Beautification Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1084",
+        },
+      ],
 
-  const loveOurCityData = {
+      "Crossroads Campus": [
+        {
+          name: "Shelter KC - Serving the Homeless Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1088",
+        },
+        {
+          name: "Eleos Coffee House - Ministry Space Renovations Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1089",
+        },
+      ],
 
-    "Blue Springs Campus": [
-      { name: "Abundant Life Blue Springs - First Responders Breakfast Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1085" },
-      { name: "City of Blue Springs - Mulching City Buildings Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1018" },
-      { name: "City of Blue Springs - Paint Tunnel Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1062" },
-      { name: "City of Blue Springs - Mulch Rotary Park Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1082" },
-      { name: "Plaza Heights Christian Academy - Playground Mulching Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1083" },
-      { name: "William Bryant Elementary - Bobcat Beautification Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1084" }
-    ],
+      "Independence Campus": [
+        {
+          name: "Harvester's - Serving in the Warehouse 8:30-10:30 Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1091",
+        },
+        {
+          name: "Harvester's - Serving in the Warehouse 1:30-3:30 Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1092",
+        },
+        {
+          name: "Mother's Refuge - The Cozy Corner and Closet Organization Refresh Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1090",
+        },
+      ],
 
-    "Crossroads Campus": [
-      { name: "Shelter KC - Serving the Homeless Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1088" },
-      { name: "Eleos Coffee House - Ministry Space Renovations Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1089" }
-    ],
+      "Johnson County Campus": [
+        {
+          name: "Cornerstones of Care - Greenhouse Refresh and Garden Work Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1094",
+        },
+        {
+          name: "Joy Meadows - Staining and Painting of Railing Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1093",
+        },
+        {
+          name: "Kansas City Dream Center - Serenity Space Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1095",
+        },
+      ],
 
-    "Independence Campus": [
-      { name: "Harvester's - Serving in the Warehouse 8:30-10:30 Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1091" },
-      { name: "Harvester's - Serving in the Warehouse 1:30-3:30 Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1092" },
-      { name: "Mother's Refuge - The Cozy Corner and Closet Organization Refresh Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1090" }
-    ],
+      "Lee’s Summit Campus": [
+        {
+          name: "Hygiene Care Packages for the Homeless Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1100",
+        },
+        {
+          name: "Abundant Life - Gift Bags for Essential Workers Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1101",
+        },
+        {
+          name: "Agape Pamoja - House Renovation Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1096",
+        },
+        {
+          name: "Foster Kids KC - Spring Fling Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1099",
+        },
+        {
+          name: "Refuge KC - ELL Service Team",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1097",
+        },
+        {
+          name: "Rehope - Clean Out Small Barn Project",
+          link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1098",
+        },
+      ],
+    };
 
-    "Johnson County Campus": [
-      { name: "Cornerstones of Care - Greenhouse Refresh and Garden Work Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1094" },
-      { name: "Joy Meadows - Staining and Painting of Railing Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1093" },
-      { name: "Kansas City Dream Center - Serenity Space Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1095" }
-    ],
+    const campusContainer = document.getElementById("campusButtons");
+    const projectContainer = document.getElementById("projectButtons");
+    const projectStep = document.getElementById("projectStep");
+    const registerStep = document.getElementById("registerStep");
+    const registerBtn = document.getElementById("registerBtn");
+    const resetBtn = document.getElementById("resetBtn");
 
-    "Lee’s Summit Campus": [
-      { name: "Hygiene Care Packages for the Homeless Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1100" },
-      { name: "Abundant Life - Gift Bags for Essential Workers Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1101" },
-      { name: "Agape Pamoja - House Renovation Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1096" },
-      { name: "Foster Kids KC - Spring Fling Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1099" },
-      { name: "Refuge KC - ELL Service Team", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1097" },
-      { name: "Rehope - Clean Out Small Barn Project", link: "https://my.livingproof.co/Registration?RegistrationInstanceId=1098" }
-    ]
+    let selectedProject = null;
 
-  };
-
-  const campusContainer = document.getElementById("campusButtons");
-  const projectContainer = document.getElementById("projectButtons");
-  const projectStep = document.getElementById("projectStep");
-  const registerStep = document.getElementById("registerStep");
-  const registerBtn = document.getElementById("registerBtn");
-  const resetBtn = document.getElementById("resetBtn");
-
-  let selectedProject = null;
-
-  function getAllProjects() {
-    let all = [];
-    Object.keys(loveOurCityData).forEach(campus => {
-      loveOurCityData[campus].forEach(project => {
-        all.push({
-          name: project.name + " (" + campus + ")",
-          link: project.link
+    function getAllProjects() {
+      let all = [];
+      Object.keys(loveOurCityData).forEach((campus) => {
+        loveOurCityData[campus].forEach((project) => {
+          all.push({
+            name: project.name + " (" + campus + ")",
+            link: project.link,
+          });
         });
       });
+      return all;
+    }
+
+    const campusKeys = ["All Projects", ...Object.keys(loveOurCityData)];
+
+    campusKeys.forEach((campus) => {
+      const btn = document.createElement("button");
+      btn.className = "loc-btn";
+      btn.textContent = campus;
+
+      btn.onclick = function () {
+        highlightSelection(campusContainer, btn);
+
+        if (campus === "All Projects") {
+          loadProjects(getAllProjects());
+        } else {
+          loadProjects(loveOurCityData[campus]);
+        }
+
+        projectStep.classList.remove("loc-hidden");
+        resetBtn.classList.remove("loc-hidden");
+
+        if (window.innerWidth <= 768) {
+          setTimeout(() => {
+            projectStep.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }, 150);
+        }
+      };
+
+      campusContainer.appendChild(btn);
     });
-    return all;
-  }
 
-  const campusKeys = ["All Projects", ...Object.keys(loveOurCityData)];
+    function loadProjects(projectList) {
+      projectContainer.innerHTML = "";
+      registerStep.classList.add("loc-hidden");
 
-  campusKeys.forEach(campus => {
-    const btn = document.createElement("button");
-    btn.className = "loc-btn";
-    btn.textContent = campus;
+      projectList.forEach((project) => {
+        const btn = document.createElement("button");
+        btn.className = "loc-project-btn";
+        btn.textContent = project.name;
 
-    btn.onclick = function() {
-      highlightSelection(campusContainer, btn);
+        btn.onclick = function () {
+          selectedProject = project;
+          highlightSelection(projectContainer, btn);
+          registerStep.classList.remove("loc-hidden");
+        };
 
-      if (campus === "All Projects") {
-        loadProjects(getAllProjects());
-      } else {
-        loadProjects(loveOurCityData[campus]);
-      }
+        projectContainer.appendChild(btn);
+      });
+    }
 
-      projectStep.classList.remove("loc-hidden");
-      resetBtn.classList.remove("loc-hidden");
+    function highlightSelection(container, activeBtn) {
+      const buttons = container.querySelectorAll("button");
+      buttons.forEach((btn) => {
+        btn.classList.remove("loc-active", "loc-faded");
+        if (btn !== activeBtn) {
+          btn.classList.add("loc-faded");
+        } else {
+          btn.classList.add("loc-active");
+        }
+      });
+    }
 
-      if (window.innerWidth <= 768) {
-        setTimeout(() => {
-          projectStep.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-        }, 150);
+    registerBtn.onclick = function () {
+      if (selectedProject && selectedProject.link) {
+        window.open(selectedProject.link, "_blank", "noopener,noreferrer");
       }
     };
 
-    campusContainer.appendChild(btn);
-  });
+    resetBtn.onclick = function () {
+      campusContainer.querySelectorAll("button").forEach((btn) => {
+        btn.classList.remove("loc-active", "loc-faded");
+      });
 
-  function loadProjects(projectList) {
-    projectContainer.innerHTML = "";
-    registerStep.classList.add("loc-hidden");
+      projectContainer.innerHTML = "";
+      projectStep.classList.add("loc-hidden");
+      registerStep.classList.add("loc-hidden");
+      resetBtn.classList.add("loc-hidden");
 
-    projectList.forEach(project => {
-      const btn = document.createElement("button");
-      btn.className = "loc-project-btn";
-      btn.textContent = project.name;
-
-      btn.onclick = function() {
-        selectedProject = project;
-        highlightSelection(projectContainer, btn);
-        registerStep.classList.remove("loc-hidden");
-      };
-
-      projectContainer.appendChild(btn);
-    });
-  }
-
-  function highlightSelection(container, activeBtn) {
-    const buttons = container.querySelectorAll("button");
-    buttons.forEach(btn => {
-      btn.classList.remove("loc-active", "loc-faded");
-      if (btn !== activeBtn) {
-        btn.classList.add("loc-faded");
-      } else {
-        btn.classList.add("loc-active");
-      }
-    });
-  }
-
-  registerBtn.onclick = function() {
-    if (selectedProject && selectedProject.link) {
-      window.open(selectedProject.link, "_blank", "noopener,noreferrer");
-    }
-  };
-
-  resetBtn.onclick = function() {
-    campusContainer.querySelectorAll("button").forEach(btn => {
-      btn.classList.remove("loc-active", "loc-faded");
-    });
-
-    projectContainer.innerHTML = "";
-    projectStep.classList.add("loc-hidden");
-    registerStep.classList.add("loc-hidden");
-    resetBtn.classList.add("loc-hidden");
-
-    document.getElementById("loveOurCityTop").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  };
-
-}, 200);
+      document.getElementById("loveOurCityTop").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+  }, 200);
 </script>

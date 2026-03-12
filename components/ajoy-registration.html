@@ -1,125 +1,115 @@
 <style>
+  /* --- AJOY REGISTER BUTTON --- */
 
-/* --- AJOY REGISTER BUTTON --- */
-
-.ajoy-register-wrap{
-  text-align:center;
-  margin:10px 0;
-}
-
-.ajoy-register-btn{
-  display:inline-block;
-  background:linear-gradient(135deg,#9ad64d,#8ed13f);
-  color:#053B5A;
-  font-weight:700;
-  font-size:20px;
-  padding:18px 42px;
-  border-radius:50px;
-  text-decoration:none;
-  border:4px solid #0b7a8f;
-  box-shadow:0 8px 22px rgba(0,0,0,0.15);
-  transition:all .3s ease;
-}
-
-.ajoy-register-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:
-    0 12px 30px rgba(0,0,0,0.18),
-    0 0 18px rgba(154,214,77,.45);
-}
-
-@media(max-width:768px){
-  .ajoy-register-btn{
-    font-size:18px;
-    padding:16px 30px;
+  .ajoy-register-wrap {
+    text-align: center;
+    margin: 10px 0;
   }
-}
 
+  .ajoy-register-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #9ad64d, #8ed13f);
+    color: #053b5a;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 18px 42px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 4px solid #0b7a8f;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .ajoy-register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.18),
+      0 0 18px rgba(154, 214, 77, 0.45);
+  }
+
+  @media (max-width: 768px) {
+    .ajoy-register-btn {
+      font-size: 18px;
+      padding: 16px 30px;
+    }
+  }
 </style>
 
-
 <div class="ajoy-register-wrap">
-  <a id="ajoy-register-btn"
-     class="ajoy-register-btn"
-     href="#"
-     target="_blank">
-     Register
+  <a id="ajoy-register-btn" class="ajoy-register-btn" href="#" target="_blank">
+    Register
   </a>
 </div>
 
-
 <script>
+  /* MONTHLY LINKS */
 
-/* MONTHLY LINKS */
+  const MONTHLY_REG = {
+    "2026-03": "https://my.livingproof.co/Registration/ajoymarch2026",
+    "2026-04": "https://my.livingproof.co/Registration/ajoyapril2026",
+    "2026-05": "https://my.livingproof.co/Registration/ajoymay2026",
+    "2026-06": "https://my.livingproof.co/Registration/ajoyjune2026",
+  };
 
-const MONTHLY_REG = {
-  "2026-03":"https://my.livingproof.co/Registration/ajoymarch2026",
-  "2026-04":"https://my.livingproof.co/Registration/ajoyapril2026",
-  "2026-05":"https://my.livingproof.co/Registration/ajoymay2026",
-  "2026-06":"https://my.livingproof.co/Registration/ajoyjune2026"
-};
+  /* MONTH NAMES */
 
+  const MONTH_NAMES = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-/* MONTH NAMES */
+  /* DATE LOGIC */
 
-const MONTH_NAMES = [
-"January","February","March","April","May","June",
-"July","August","September","October","November","December"
-];
+  const now = new Date();
 
+  let year = now.getFullYear();
+  let month = now.getMonth();
 
-/* DATE LOGIC */
+  /* find first day of next month */
 
-const now = new Date();
+  const nextMonthStart = new Date(year, month + 1, 1);
 
-let year = now.getFullYear();
-let month = now.getMonth();
+  /* show next month registration 7 days early */
 
-/* find first day of next month */
+  const switchDate = new Date(nextMonthStart);
+  switchDate.setDate(switchDate.getDate() - 7);
 
-const nextMonthStart = new Date(year, month + 1, 1);
+  /* determine active month */
 
-/* show next month registration 7 days early */
+  if (now >= switchDate) {
+    month = month + 1;
+  }
 
-const switchDate = new Date(nextMonthStart);
-switchDate.setDate(switchDate.getDate() - 7);
+  /* adjust year if needed */
 
+  if (month > 11) {
+    month = 0;
+    year = year + 1;
+  }
 
-/* determine active month */
+  /* format key */
 
-if(now >= switchDate){
-  month = month + 1;
-}
+  const key = year + "-" + String(month + 1).padStart(2, "0");
 
+  const btn = document.getElementById("ajoy-register-btn");
 
-/* adjust year if needed */
+  /* APPLY BUTTON */
 
-if(month > 11){
-  month = 0;
-  year = year + 1;
-}
+  if (MONTHLY_REG[key]) {
+    btn.href = MONTHLY_REG[key];
 
-
-/* format key */
-
-const key = year + "-" + String(month+1).padStart(2,"0");
-
-
-const btn = document.getElementById("ajoy-register-btn");
-
-
-/* APPLY BUTTON */
-
-if(MONTHLY_REG[key]){
-
-btn.href = MONTHLY_REG[key];
-
-btn.textContent = "Register for " + MONTH_NAMES[month];
-
-}else{
-
-document.querySelector(".ajoy-register-wrap").style.display="none";
-
-}
-
+    btn.textContent = "Register for " + MONTH_NAMES[month];
+  } else {
+    document.querySelector(".ajoy-register-wrap").style.display = "none";
+  }
 </script>
