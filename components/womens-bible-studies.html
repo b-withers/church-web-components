@@ -1,383 +1,322 @@
+<!--
+Reusable Church Component
+Women's Bible Study Grid
+
+Features
+• Campus filtering
+• Responsive card grid
+• Metadata icons (day, dates, time, location)
+• Register button CTA
+• Mobile responsive layout
+
+Dependencies
+• Phosphor Icons
+• Google Font: Lora
+
+Usage
+Drop this file into any HTML page, CMS block, or WordPress custom HTML block.
+-->
+
+<!-- Phosphor Icons CDN -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap"
+  rel="stylesheet"
+/>
+
 <style>
+  .wbs-wrap {
+    --color-accent: #8dc63f;
+    --color-accent-dark: #7bb52f;
+    --color-primary: #053b5a;
+    --color-meta: #4b5b66;
+    --color-desc: #666;
+    --color-header: #6b7b88;
+    --color-divider: #e6e6e6;
+    --color-card-bg: #ffffff;
+    --color-card-border: rgba(0, 0, 0, 0.04);
+    --color-shadow-sm: rgba(0, 0, 0, 0.07);
+    --color-shadow-lg: rgba(0, 0, 0, 0.13);
 
-/* CAMPUS HEADER */
+    --icon-calendar: #4a90d9;
+    --icon-daterange: #7b68c8;
+    --icon-clock: #e8a020;
+    --icon-location: #e05c5c;
+    --icon-globe: #2aabbf;
 
-.campus-header{
-font-size:20px;
-font-weight:700;
-color:#6b7b88;
-text-transform:uppercase;
-letter-spacing:1px;
-margin-top:60px;
-margin-bottom:18px;
-padding-bottom:10px;
-border-bottom:1px solid #e6e6e6;
-}
+    --radius-card: 14px;
+    --radius-btn: 24px;
+    --gap-grid: 28px;
+    --pad-card: 28px;
+    --font-title: 24px;
+    --font-meta: 14px;
+    --font-btn: 13px;
+    --font-header: 22px;
+  }
 
+  /* FILTER BAR */
 
-/* GRID */
+  .wbs-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
 
-.study-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:28px;
-margin-top:20px;
-align-items:stretch;
-}
+  .wbs-filter-btn {
+    background: transparent;
+    border: 1.5px solid var(--color-divider);
+    border-radius: 20px;
+    padding: 7px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-meta);
+    cursor: pointer;
+    transition: 0.2s;
+  }
 
-@media (max-width:1024px){
-.study-grid{
-grid-template-columns:repeat(2,1fr);
-}
-}
+  .wbs-filter-btn:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
 
-@media (max-width:640px){
-.study-grid{
-grid-template-columns:1fr;
-}
-}
+  .wbs-filter-btn.active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-primary);
+  }
 
+  /* CAMPUS HEADER */
 
-/* CARD */
+  .campus-header {
+    font-size: var(--font-header);
+    font-weight: 700;
+    color: var(--color-header);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 60px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+    border-bottom: 1px solid var(--color-divider);
+    position: relative;
+  }
 
-.study-card{
-background:#ffffff;
-border-radius:14px;
-padding:28px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
-display:flex;
-flex-direction:column;
-border:1px solid rgba(0,0,0,.04);
-position:relative;
-overflow:hidden;
-transition:.25s ease;
-height:100%;
-min-height:280px;
-}
+  .campus-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 12px;
+    width: 4px;
+    background: var(--color-accent);
+    border-radius: 2px;
+  }
 
-.study-card:before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:4px;
-background:#8dc63f;
-}
+  /* GRID */
 
-.study-card:hover{
-transform:translateY(-6px);
-box-shadow:0 16px 40px rgba(0,0,0,.12);
-}
+  .study-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-grid);
+  }
 
+  @media (max-width: 1024px) {
+    .study-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-/* TITLE */
+  @media (max-width: 640px) {
+    .study-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
-.study-title{
-font-size:24px;
-font-weight:700;
-color:#053B5A;
-margin-bottom:12px;
-line-height:1.3;
-}
+  /* CARD */
 
+  .study-card {
+    background: linear-gradient(160deg, #ffffff 0%, #f8faf5 100%);
+    border-radius: var(--radius-card);
+    padding: var(--pad-card);
+    box-shadow: 0 20px 50px var(--color-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-card-border);
+    position: relative;
+    transition: 0.3s ease;
+  }
 
-/* META */
+  .study-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px var(--color-shadow-lg);
+  }
 
-.study-meta{
-font-size:14px;
-color:#4b5b66;
-line-height:1.7;
-margin-bottom:18px;
-}
+  .study-title {
+    font-family: "Lora", Georgia, serif;
+    font-size: var(--font-title);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 14px;
+  }
 
-.study-meta span{
-display:block;
-margin-bottom:4px;
-}
+  .study-meta {
+    font-size: var(--font-meta);
+    color: var(--color-meta);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
 
+  .study-meta__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+  }
 
-/* DIVIDER */
+  .study-desc {
+    font-size: var(--font-meta);
+    color: var(--color-desc);
+    line-height: 1.8;
+    margin-bottom: 22px;
+    flex-grow: 1;
+  }
 
-.study-divider{
-height:1px;
-background:#e6e6e6;
-margin:14px 0 16px 0;
-}
+  .study-btn a {
+    display: block;
+    text-align: center;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 12px 20px;
+    border-radius: var(--radius-btn);
+    font-weight: 700;
+    font-size: var(--font-btn);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
 
-
-/* DESCRIPTION */
-
-.study-desc{
-font-size:14px;
-color:#666;
-line-height:1.7;
-margin-bottom:22px;
-}
-
-
-/* BUTTON */
-
-.study-btn{
-margin-top:auto;
-}
-
-.study-btn a{
-display:inline-block;
-background:#8dc63f;
-color:#053B5A;
-padding:11px 20px;
-border-radius:24px;
-font-weight:600;
-font-size:14px;
-text-decoration:none;
-transition:.2s;
-}
-
-.study-btn a:hover{
-background:#7bb52f;
-}
-
+  .study-btn a:hover {
+    background: var(--color-accent-dark);
+  }
 </style>
 
+<div class="wbs-wrap">
+  <div class="wbs-filters">
+    <button class="wbs-filter-btn active" data-filter-campus="all">
+      All Campuses
+    </button>
+    <button class="wbs-filter-btn" data-filter-campus="campus-a">
+      Campus A
+    </button>
+    <button class="wbs-filter-btn" data-filter-campus="campus-b">
+      Campus B
+    </button>
+    <button class="wbs-filter-btn" data-filter-campus="campus-c">
+      Campus C
+    </button>
+    <button class="wbs-filter-btn" data-filter-campus="campus-d">
+      Campus D
+    </button>
+    <button class="wbs-filter-btn" data-filter-campus="online">Online</button>
+  </div>
 
+  <!-- CAMPUS A -->
 
-<!-- LEE'S SUMMIT -->
+  <div class="wbs-campus-section" data-campus="campus-a">
+    <div class="campus-header">Campus A</div>
 
-<div class="campus-header">Lee's Summit Campus</div>
+    <div class="study-grid">
+      <div class="study-card">
+        <div class="study-title">Example Study</div>
 
-<div class="study-grid">
+        <div class="study-meta">
+          <span class="study-meta__item"
+            ><i class="ph ph-calendar"></i> Tuesday evenings</span
+          >
+          <span class="study-meta__item"
+            ><i class="ph ph-clock"></i> 6:30 pm – 8:00 pm</span
+          >
+          <span class="study-meta__item"
+            ><i class="ph ph-map-pin"></i> Room 101</span
+          >
+        </div>
 
-<div class="study-card">
-<div class="study-title">Forever Welcomed</div>
-<div class="study-meta">
-<span>📅 Tuesday evenings</span>
-<span>🗓 June 2 – July 14</span>
-<span>⏰ 6:30 pm – 8:00 pm</span>
-<span>📍 Abundant Life Kids Auditorium</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Forever Welcomed explores the beauty of God’s impartial love—a love not based on power, status, or influence, but rooted in His unchanging character.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/foreverwelcomedsummerlstpm">Register</a>
-</div>
-</div>
+        <div class="study-desc">
+          Example description of the Bible study. Replace with your ministry
+          content.
+        </div>
 
+        <div class="study-btn">
+          <a href="#">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="study-card">
-<div class="study-title">Forever Welcomed</div>
-<div class="study-meta">
-<span>📅 Thursday mornings</span>
-<span>🗓 June 4 – July 23</span>
-<span>⏰ 10:00 am – 12:00 pm</span>
-<span>📍 CORE C004</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Discover the beauty of God’s impartial love freely offered to everyone.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/foreverwelcomedsummerlstam">Register</a>
-</div>
-</div>
+  <!-- ONLINE -->
 
+  <div class="wbs-campus-section" data-campus="online">
+    <div class="campus-header">Online</div>
 
-<div class="study-card">
-<div class="study-title">Breathe</div>
-<div class="study-meta">
-<span>📅 Thursday evenings</span>
-<span>🗓 June 4 – July 16</span>
-<span>⏰ 6:30 pm – 8:00 pm</span>
-<span>📍 CORE C004</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Learn the life-changing gift of Sabbath and discover how slowing down helps deepen our relationship with Christ.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/breathesummer2026">Register</a>
-</div>
-</div>
+    <div class="study-grid">
+      <div class="study-card">
+        <div class="study-title">Online Bible Study</div>
 
-</div>
+        <div class="study-meta">
+          <span class="study-meta__item"
+            ><i class="ph ph-calendar"></i> Thursday nights</span
+          >
+          <span class="study-meta__item"
+            ><i class="ph ph-clock"></i> 7:00 pm – 8:30 pm</span
+          >
+          <span class="study-meta__item"
+            ><i class="ph ph-globe"></i> Online</span
+          >
+        </div>
 
+        <div class="study-desc">
+          Join participants online for a weekly scripture study and discussion.
+        </div>
 
-
-<!-- CROSSROADS -->
-
-<div class="campus-header">Crossroads Campus</div>
-
-<div class="study-grid">
-
-<div class="study-card">
-<div class="study-title">Jude</div>
-<div class="study-meta">
-<span>📅 Thursday evenings</span>
-<span>🗓 July 16 – August 27</span>
-<span>⏰ 6:30 pm – 8:00 pm</span>
-<span>📍 Room 207</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-The book of Jude calls believers to stand firm in the faith amid a world of unbelief.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/judesummer2026">Register</a>
-</div>
+        <div class="study-btn">
+          <a href="#">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-</div>
+<script>
+  (function () {
+    let activeCampus = "all";
 
+    function applyFilters() {
+      let sections = document.querySelectorAll(".wbs-campus-section");
 
+      sections.forEach((section) => {
+        let show =
+          activeCampus === "all" || section.dataset.campus === activeCampus;
+        section.style.display = show ? "block" : "none";
+      });
+    }
 
-<!-- BLUE SPRINGS -->
+    document.querySelectorAll("[data-filter-campus]").forEach((btn) => {
+      btn.addEventListener("click", function () {
+        document
+          .querySelectorAll("[data-filter-campus]")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
 
-<div class="campus-header">Blue Springs Campus</div>
-
-<div class="study-grid">
-
-<div class="study-card">
-<div class="study-title">Don’t Give the Enemy a Seat at Your Table</div>
-<div class="study-meta">
-<span>📅 Tuesday mornings</span>
-<span>🗓 June 2 – July 7</span>
-<span>⏰ 10:00 am – 11:30 am</span>
-<span>📍 Room 221</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Learn how to recognize and resist destructive thoughts through biblical truth.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/seatatthetablesummer2026">Register</a>
-</div>
-</div>
-
-
-<div class="study-card">
-<div class="study-title">Luke: Gut-Level Compassion</div>
-<div class="study-meta">
-<span>📅 Tuesday evenings</span>
-<span>🗓 June 16 – August 11</span>
-<span>⏰ 6:30 pm – 8:00 pm</span>
-<span>📍 Room 221</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Discover how the Gospel of Luke shows that perfection is not required for a deep relationship with Jesus.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/lukesummer2026">Register</a>
-</div>
-</div>
-
-
-<div class="study-card">
-<div class="study-title">Forever Welcomed</div>
-<div class="study-meta">
-<span>📅 Thursday mornings</span>
-<span>🗓 July 9 – August 13</span>
-<span>⏰ 10:00 – 11:30 am</span>
-<span>📍 Room 221</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Explore the beauty of God’s impartial love offered freely to everyone.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/foreverwelcomedbspam">Register</a>
-</div>
-</div>
-
-
-<div class="study-card">
-<div class="study-title">Ruth & Titus (Precept)</div>
-<div class="study-meta">
-<span>📅 Thursday evenings</span>
-<span>🗓 June 4 – July 23</span>
-<span>⏰ 6:30 pm – 8:00 pm</span>
-<span>📍 Room 221</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Study how Jesus redeems broken lives through Ruth and discover how to live with integrity through Titus.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/preceptsummer2026">Register</a>
-</div>
-</div>
-
-</div>
-
-
-
-<!-- INDEPENDENCE -->
-
-<div class="campus-header">Independence Campus</div>
-
-<div class="study-grid">
-
-<div class="study-card">
-<div class="study-title">Luke in the Land</div>
-<div class="study-meta">
-<span>📅 Wednesday afternoon</span>
-<span>🗓 June 10 – July 22</span>
-<span>⏰ 1:00 – 3:00 pm</span>
-<span>📍 Room 006</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Journey through Israel while studying key moments from the Gospel of Luke.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/lukeinthelandsummer2026">Register</a>
-</div>
-</div>
-
-
-<div class="study-card">
-<div class="study-title">Jesus: Experiencing His Touch</div>
-<div class="study-meta">
-<span>📅 Thursday evenings</span>
-<span>🗓 July 9 – August 13</span>
-<span>⏰ 6:30 – 8:00 pm</span>
-<span>📍 Room 006</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Explore stories of people encountering the compassion and healing power of Jesus.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/jesussummer2026">Register</a>
-</div>
-</div>
-
-</div>
-
-
-
-<!-- ONLINE -->
-
-<div class="campus-header">Online</div>
-
-<div class="study-grid">
-
-<div class="study-card">
-<div class="study-title">Love God Greatly</div>
-<div class="study-meta">
-<span>📅 Thursday nights</span>
-<span>⏰ 7:00 pm – 8:30 pm</span>
-<span>🌐 Online</span>
-</div>
-<div class="study-divider"></div>
-<div class="study-desc">
-Join women online throughout the year as we study Scripture together.
-</div>
-<div class="study-btn">
-<a href="https://my.livingproof.co/Registration/lovegodgreatlyfall2024">Register</a>
-</div>
-</div>
-
-</div>
+        activeCampus = btn.dataset.filterCampus;
+        applyFilters();
+      });
+    });
+  })();
+</script>
